@@ -2,14 +2,23 @@
                 src="assets/images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820"
                 alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a>
     </div>
-    <div class="preloader">
+    {{-- <div class="preloader">
         <div class="preloader-body">
             <div class="cssload-container">
                 <div class="cssload-speeding-wheel"></div>
             </div>
             <p>Moiz...</p>
         </div>
-    </div>
+    </div> --}}
+    <div class="preloader">
+        <div class="preloader-logo"><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-default-245x50.png" alt="" width="245" height="50"/><img class="brand-logo-light" src="images/logo-inverse-245x50.png" alt="" width="245" height="50"/></a>
+        </div>
+        <div class="preloader-body">
+          <div class="cssload-container">
+            <div class="cssload-speeding-wheel"></div>
+          </div>
+        </div>
+      </div>
     <div class="page"><a class="section section-banner d-none d-xl-flex"
             href="https://www.templatemonster.com/website-templates/monstroid2.html"
             style="background-image: url(assets/images/banner/background-04-1920x60.jpg); background-image: -webkit-image-set( url(assets/images/banner/background-04-1920x60.jpg) 1x, url(assets/images/banner/background-04-3840x120.jpg) 2x )"
