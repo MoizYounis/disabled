@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AuthenticationController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 
@@ -21,3 +22,5 @@ Route::get('home', [MainController::class, 'home'])->name('home');
 Route::get('typography', [MainController::class, 'typography'])->name('typography');
 Route::get('about', [MainController::class, 'about'])->name('about');
 Route::get('contact', [MainController::class, 'contact'])->name('contact');
+
+Route::get('register', [AuthenticationController::class, 'register'])->name('register');

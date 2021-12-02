@@ -3,7 +3,7 @@
            <!-- Swiper-->
            <section class="section section-lg section-main-bunner section-main-bunner-filter">
                <div class="main-bunner-img"
-                   style="background-image: url(&quot;assets/images/bg-bunner-2.jpg&quot;); background-size: cover;"></div>
+                   style="background-image: url(&quot;https://www.teahub.io/photos/full/165-1653944_1920x1150-2016-10-football..jpg&quot;); background-size: cover;"></div>
                <div class="main-bunner-inner">
                    <div class="container">
                        <div class="row row-50 justify-content-lg-center align-items-lg-center">
