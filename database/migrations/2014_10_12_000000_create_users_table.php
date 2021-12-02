@@ -17,10 +17,15 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->rememberToken();
+            $table->string('phone');
+            $table->string('address');
+            $table->unsignedInteger('organization_id')->index();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->boolean('is_active');
+            $table->rememberToken()->nullable();
             $table->timestamps();
+            // $table->foreign('organization_id')->references('id')->on('organization_categories');
         });
     }
 
