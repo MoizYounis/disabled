@@ -3,7 +3,7 @@
            <!-- Swiper-->
            <section class="section section-lg section-main-bunner section-main-bunner-filter">
                <div class="main-bunner-img"
-                   style="background-image: url(&quot;https://www.teahub.io/photos/full/165-1653944_1920x1150-2016-10-football..jpg&quot;); background-size: cover;"></div>
+                   style="background-image: url(&quot;https://livedemo00.template-help.com/wt_51679/images/bg-bunner-2.jpg&quot;); background-size: cover;"></div>
                <div class="main-bunner-inner">
                    <div class="container">
                        <div class="row row-50 justify-content-lg-center align-items-lg-center">
@@ -26,22 +26,22 @@
                            <div class="box-img-animate">
                                <div class="box-img-animate-item"
                                    data-parallax-scroll="{&quot;y&quot;: 0, &quot;x&quot;: 140,  &quot;smoothness&quot;: 50 }">
-                                   <img src="assets/images/animate-img-1.jpg" alt=""></div>
+                                   <img src="https://livedemo00.template-help.com/wt_51679/images/animate-img-1.jpg" alt=""></div>
                                <div class="box-img-animate-item"
                                    data-parallax-scroll="{&quot;y&quot;: 150, &quot;x&quot;: 0,  &quot;smoothness&quot;: 50 }">
-                                   <img src="assets/images/animate-img-2.jpg" alt=""></div>
+                                   <img src="https://livedemo00.template-help.com/wt_51679/images/animate-img-2.jpg" alt=""></div>
                                <div class="box-img-animate-item"
                                    data-parallax-scroll="{&quot;y&quot;:70, &quot;x&quot;: -250,  &quot;smoothness&quot;: 50 }">
-                                   <img src="assets/images/animate-img-3.jpg" alt=""></div>
+                                   <img src="https://livedemo00.template-help.com/wt_51679/images/animate-img-3.jpg" alt=""></div>
                                <div class="box-img-animate-item"
                                    data-parallax-scroll="{&quot;y&quot;:20, &quot;x&quot;: 20,  &quot;smoothness&quot;: 50 }">
-                                   <img src="assets/images/animate-img-4.jpg" alt=""></div>
+                                   <img src="https://livedemo00.template-help.com/wt_51679/images/animate-img-3.jpg" alt=""></div>
                                <div class="box-img-animate-item"
                                    data-parallax-scroll="{&quot;y&quot;:60, &quot;x&quot;: 70,  &quot;smoothness&quot;: 50 }">
-                                   <img src="assets/images/animate-img-5.jpg" alt=""></div>
+                                   <img src="https://livedemo00.template-help.com/wt_51679/images/animate-img-4.jpg" alt=""></div>
                                <div class="box-img-animate-item"
                                    data-parallax-scroll="{&quot;y&quot;:0, &quot;x&quot;: 140,  &quot;smoothness&quot;: 50 }">
-                                   <img src="assets/images/animate-img-6.jpg" alt=""></div>
+                                   <img src="https://livedemo00.template-help.com/wt_51679/images/animate-img-5.jpgs" alt=""></div>
                            </div>
                        </div>
                        <div class="col-lg-6 col-xl-5">
