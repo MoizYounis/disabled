@@ -2,14 +2,6 @@
                 src="assets/images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820"
                 alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a>
     </div>
-    {{-- <div class="preloader">
-        <div class="preloader-body">
-            <div class="cssload-container">
-                <div class="cssload-speeding-wheel"></div>
-            </div>
-            <p>Moiz...</p>
-        </div>
-    </div> --}}
     <div class="preloader">
         <div class="preloader-logo"><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-default-245x50.png" alt="" width="245" height="50"/><img class="brand-logo-light" src="images/logo-inverse-245x50.png" alt="" width="245" height="50"/></a>
         </div>
@@ -19,12 +11,7 @@
           </div>
         </div>
       </div>
-    <div class="page"><a class="section section-banner d-none d-xl-flex"
-            href="https://www.templatemonster.com/website-templates/monstroid2.html"
-            style="background-image: url(assets/images/banner/background-04-1920x60.jpg); background-image: -webkit-image-set( url(assets/images/banner/background-04-1920x60.jpg) 1x, url(assets/images/banner/background-04-3840x120.jpg) 2x )"
-            target="_blank"><img src="assets/images/banner/foreground-04-1600x60.png"
-                srcset="assets/images/banner/foreground-04-1600x60.png 1x, assets/images/banner/foreground-04-3200x120.png 2x"
-                alt="" width="1600" height="310"></a> 
+    <div class="page animated" style="animation-duration: 500ms">
         <!-- Page Header-->
         <header class="section page-header">
             <!-- RD Navbar-->

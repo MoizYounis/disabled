@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AuthenticationController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 
@@ -24,3 +25,4 @@ Route::get('about', [MainController::class, 'about'])->name('about');
 Route::get('contact', [MainController::class, 'contact'])->name('contact');
 
 Route::get('register', [AuthenticationController::class, 'register'])->name('register');
+Route::get('login', [LoginController::class, 'login'])->name('login');
