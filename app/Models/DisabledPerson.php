@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class organiztion extends Model
+class DisabledPerson extends Model
 {
     use HasFactory;
 }

@@ -25,7 +25,7 @@ class CreateUsersTable extends Migration
             $table->boolean('is_active');
             $table->rememberToken()->nullable();
             $table->timestamps();
-            // $table->foreign('organization_id')->references('id')->on('organization_categories');
+            $table->foreign('organization_id')->references('id')->on('organization_categories');
         });
     }
 
