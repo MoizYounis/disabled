@@ -22,7 +22,9 @@
         <p>Loading...</p>
       </div>
     </div>
-    <div class="page"><a class="section section-banner d-none d-xl-flex" href="https://www.templatemonster.com/website-templates/monstroid2.html" style="background-image: url(assets/images/banner/background-04-1920x60.jpg); background-image: -webkit-image-set( url(assets/images/banner/background-04-1920x60.jpg) 1x, url(assets/images/banner/background-04-3840x120.jpg) 2x )" target="_blank"><img src="assets/images/banner/foreground-04-1600x60.png" srcset="assets/images/banner/foreground-04-1600x60.png 1x, assets/images/banner/foreground-04-3200x120.png 2x" alt="" width="1600" height="310"></a>
+    <div class="page">
+      {{-- <a class="section section-banner d-none d-xl-flex" href="https://www.templatemonster.com/website-templates/monstroid2.html" style="background-image: url(assets/images/banner/background-04-1920x60.jpg); background-image: -webkit-image-set( url(assets/images/banner/background-04-1920x60.jpg) 1x, url(assets/images/banner/background-04-3840x120.jpg) 2x )" target="_blank"> --}}
+        {{-- <img src="assets/images/banner/foreground-04-1600x60.png" srcset="assets/images/banner/foreground-04-1600x60.png 1x, assets/images/banner/foreground-04-3200x120.png 2x" alt="" width="1600" height="310"></a> --}}
       <!-- Page Header-->
       <header class="section page-header">
         <!-- RD Navbar-->
@@ -35,7 +37,7 @@
                   <!-- RD Navbar Toggle-->
                   <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                   <!-- RD Navbar Brand-->
-                  <div class="rd-navbar-brand"><a href="index.html"><img class="brand-logo-light" src="assets/images/logo-inverse-415x103.png" alt="" width="207" height="51"/></a></div>
+                  <div class="rd-navbar-brand"><a href="#"><img class="brand-logo-light" src="assets/images/logo-inverse-415x103.png" alt="" width="207" height="51"/></a></div>
                 </div>
                 <div class="rd-navbar-main-element">
                   <div class="rd-navbar-nav-wrap">
@@ -59,7 +61,8 @@
       </header>
       <!-- Swiper-->
       <section class="section section-lg section-main-bunner section-main-bunner-filter">
-        <div class="main-bunner-img" style="background-image: url(&quot;assets/images/bg-bunner-2.jpg&quot;); background-size: cover;"></div>
+        {{-- <div class="main-bunner-img" style="background-image: url(&quot;assets/images/bg-bunner-2.jpg&quot;); background-size: cover;"></div> --}}
+        <div class="main-bunner-img" style="background-image: url(https://www.teahub.io/photos/full/165-1653944_1920x1150-2016-10-football..jpg); background-size: cover;"></div>
         <div class="main-bunner-inner">
           <div class="container">
             <div class="row row-50 justify-content-lg-center align-items-lg-center">
