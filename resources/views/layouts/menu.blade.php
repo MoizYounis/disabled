@@ -3,14 +3,16 @@
                 alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a>
     </div>
     <div class="preloader">
-        <div class="preloader-logo"><a class="brand" href="index.html"><img class="brand-logo-dark" src="images/logo-default-245x50.png" alt="" width="245" height="50"/><img class="brand-logo-light" src="images/logo-inverse-245x50.png" alt="" width="245" height="50"/></a>
+        <div class="preloader-logo"><a class="brand" href="index.html"><img class="brand-logo-dark"
+                    src="assets/images/pwb-hub.png" alt="" width="245" height="50" /><img class="brand-logo-light"
+                    src="assets/images/pwb-hub.png" alt="" width="245" height="50" /></a>
         </div>
         <div class="preloader-body">
-          <div class="cssload-container">
-            <div class="cssload-speeding-wheel"></div>
-          </div>
+            <div class="cssload-container">
+                <div class="cssload-speeding-wheel"></div>
+            </div>
         </div>
-      </div>
+    </div>
     <div class="page animated" style="animation-duration: 500ms">
         <!-- Page Header-->
         <header class="section page-header">
@@ -32,8 +34,7 @@
                                     data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                                 <!-- RD Navbar Brand-->
                                 <div class="rd-navbar-brand"><a href="index.html"><img class="brand-logo-light"
-                                            src="assets/images/logo-inverse-415x103.png" alt="" width="207"
-                                            height="51" /></a></div>
+                                            src="assets/images/pwb-hub.png" alt="" width="207" height="51" /></a></div>
                             </div>
                             <div class="rd-navbar-main-element">
                                 <div class="rd-navbar-nav-wrap">
@@ -42,7 +43,8 @@
                                         <li class="rd-nav-item active"><a class="rd-nav-link"
                                                 href="{{ route('home') }}">Home</a>
                                         </li>
-                                        <li class="rd-nav-item"><a class="rd-nav-link" href="{{ route('about') }}">About
+                                        <li class="rd-nav-item"><a class="rd-nav-link"
+                                                href="{{ route('about') }}">About
                                                 Us</a>
                                         </li>
                                         <li class="rd-nav-item"><a class="rd-nav-link"
@@ -51,9 +53,23 @@
                                         <li class="rd-nav-item"><a class="rd-nav-link"
                                                 href="{{ route('contact') }}">Contacts</a>
                                         </li>
-                                    </ul><a class="button button-primary button-sm" href="#">Donate</a>
+                                        {{-- <li class="rd-nav-item"><a class="rd-nav-link"
+                                            href="{{ route('register') }}">Register Now</a>
+                                         </li> --}}
+                                    </ul>
                                 </div>
-                            </div><a class="button button-primary button-sm" href="#">Donate</a>
+                            </div>{{-- <a class="button button-primary button-sm" href="#">Donate</a> --}}
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle button-primary" type="button"
+                                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false">
+                                    {{Session::get('user')['name']}}
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" href="#">Profile</a>
+                                    <a class="dropdown-item" href="{{route('logout')}}">Logout</a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </nav>

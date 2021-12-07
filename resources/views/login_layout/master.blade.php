@@ -32,9 +32,7 @@
     </style>
 </head>
 <body>
-    @include('layouts.menu')
     @yield('section')
-    @include('layouts.footer')
     <script src="assets/js/core.min.js"></script>
     <script src="assets/js/script.js"></script>
     <!-- coded by ragnar-->

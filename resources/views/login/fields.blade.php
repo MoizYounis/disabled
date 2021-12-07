@@ -1,16 +1,15 @@
 <!-- Reggisratration Form-->
-<form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post"
-    action="bat/rd-mailform.php">
-
-    
+<form class=""  method="POST"
+    action="{{route('login')}}">
+    @csrf
     <div class="form-wrap">
-        <input class="form-input" id="contact-name" type="text" name="" data-constraints="@Required">
+        <input class="form-input" id="contact-name" type="email" name="email" data-constraints="@Required">
         <label class="form-label" for="contact-name">User Name *</label>
     </div>
 
 
     <div class="form-wrap">
-        <input class="form-input" id="contact-password" type="password" name="" autocomplete="new-password" data-constraints="@Required">
+        <input class="form-input" id="contact-password" type="password" name="password" autocomplete="new-password" data-constraints="@Required">
         <label class="form-label" for="contact-password">Password *</label>
     </div>
 

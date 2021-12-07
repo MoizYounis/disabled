@@ -25,4 +25,10 @@ class MainController extends Controller
     {
         return view('contact'); 
     }
+    public function logout(){
+        if (session()->has('user')) {
+            session()->put('user', null);
+        }
+        return redirect('/');
+    }
 }

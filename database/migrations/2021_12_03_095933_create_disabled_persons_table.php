@@ -21,7 +21,7 @@ class CreateDisabledPersonsTable extends Migration
             $table->integer('phone');
             $table->string('permanent_address')->nullable();
             $table->string('present_address')->nullable();  
-            $table->unsignedInteger('disability_id')->index();
+            $table->unsignedBigInteger('disability_id');
             $table->timestamps();
             $table->foreign('disability_id')->references('id')->on('dis_persons_cats');
         });
