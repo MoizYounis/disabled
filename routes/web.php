@@ -2,9 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
-use App\Http\Controllers\MainController;
-use App\Http\Controllers\LoginController;
-use App\Http\Controllers\AuthenticationController;
+use App\Http\Controllers\HomeController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,21 +15,14 @@ use App\Http\Controllers\AuthenticationController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/logout', function () {
-    Session::forget('user');
-    return redirect('/');
-});
-Route::get('logout', [MainController::class, 'logout'])->name('logout');
-Route::group(['middleware' => ['user']], function (){
-    Route::get('/', function () {
-        return view('login.index');
+Route::get('/',function(){
+    return view('auth.login');
     });
-    Route::view('/login', 'login.index');
-    Route::post('login', [LoginController::class, 'login'])->name('login');
-    Route::get('register', [AuthenticationController::class, 'register'])->name('register');
-    Route::post('register', [AuthenticationController::class, 'store'])->name('register.store');
-});
-Route::get('home', [MainController::class, 'home'])->name('home');
-Route::get('typography', [MainController::class, 'typography'])->name('typography');
-Route::get('about', [MainController::class, 'about'])->name('about');
-Route::get('contact', [MainController::class, 'contact'])->name('contact');
+    Auth::routes();
+    Route::group(['middleware' => ['auth']], function () {
+        Route::get('home', [HomeController::class, 'home'])->name('home');
+        Route::get('typography', [HomeController::class, 'typography'])->name('typography');
+        Route::get('about', [HomeController::class, 'about'])->name('about');
+        Route::get('contact', [HomeController::class, 'contact'])->name('contact');
+    });
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

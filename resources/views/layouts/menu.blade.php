@@ -63,11 +63,11 @@
                                 <button class="btn btn-secondary dropdown-toggle button-primary" type="button"
                                     id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
                                     aria-expanded="false">
-                                    {{Session::get('user')['name']}}
+                                    {{ Auth::user()->name }}
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                     <a class="dropdown-item" href="#">Profile</a>
-                                    <a class="dropdown-item" href="{{route('logout')}}">Logout</a>
+                                    <a class="dropdown-item" href="">Logout</a>
                                 </div>
                             </div>
                         </div>
