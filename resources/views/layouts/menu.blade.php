@@ -25,8 +25,8 @@
                     data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static"
                     data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px"
                     data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
-                    <div class="rd-navbar-main-outer">
-                        <div class="rd-navbar-main">
+                    <div class="rd-navbar-main-outer" style="background: #444;">
+                        <div class="rd-navbar-main" style="padding: 0px 0;">
                             <!-- RD Navbar Panel-->
                             <div class="rd-navbar-panel">
                                 <!-- RD Navbar Toggle-->
@@ -66,7 +66,7 @@
                                     {{ Auth::user()->name }}
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item hello" href="#">Profile</a>
+                                    <a class="dropdown-item hello" href="{{ route('profile') }}">Profile</a>
                                     <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                                   document.getElementById('logout-form').submit();">
