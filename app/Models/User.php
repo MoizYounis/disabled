@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
@@ -25,7 +26,10 @@ class User extends Authenticatable
         'password',
         'phone',
         'organization_id',
-        'address'
+        'address',
+        'is_active',
+        'city',
+        'province_id'
     ];
 
     /**
@@ -46,9 +50,31 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    /**
+     * Get the categories that owns the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function categories(): BelongsTo
+    {
+        return $this->belongsTo(OrganizationCategory::class, 'organization_id');
+    }
+
+
+    /**
+     * Get the provinces that owns the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
+     */
+    public function provinces(): BelongsTo
+    {
+        return $this->belongsTo(Province::class, 'province_id');
+    }
+
     public function saveOrganization($formData)
     {
-        
+
         try {
             DB::beginTransaction();
             $this->create($formData);

@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\HomeController;
-
+use App\Http\Controllers\ProfileController;
+use Illuminate\Support\Facades\Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,13 +18,16 @@ use App\Http\Controllers\HomeController;
 |
 */
 Route::get('/',function(){
-    return redirect()->route('login');
-    });
-    Auth::routes();
+    return view('auth.login');
+});
+
+Auth::routes();
+    // Auth::post('register', [RegisterController::class, 'create']);
     Route::group(['middleware' => ['auth']], function () {
-        Route::get('home', [HomeController::class, 'home'])->name('home');
+        Route::get('home', [HomeController::class, 'index'])->name('home');
         Route::get('typography', [HomeController::class, 'typography'])->name('typography');
         Route::get('about', [HomeController::class, 'about'])->name('about');
         Route::get('contact', [HomeController::class, 'contact'])->name('contact');
+        Route::get('profile', [ProfileController::class, 'index'])->name('profile');
     });
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

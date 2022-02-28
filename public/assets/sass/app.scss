@@ -7,3 +7,9 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+
+.register-page__main {
+    box-shadow: 1px 1px 17px 9px #dce0e9;
+    background-color: $base;
+    width: 100%;
+}
