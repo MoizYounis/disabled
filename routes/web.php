@@ -16,7 +16,7 @@ use App\Http\Controllers\HomeController;
 |
 */
 Route::get('/',function(){
-    return view('auth.login');
+    return redirect()->route('login');
     });
     Auth::routes();
     Route::group(['middleware' => ['auth']], function () {

@@ -26,6 +26,53 @@
                         </div>
 
                         <div class="row mb-3">
+                            <label for="organization" class="col-md-4 col-form-label text-md-end">{{ __('Organization') }}</label>
+
+                            <div class="col-md-6 ">
+                                <select name="organization_id" class="form-control" id="organization">
+                                    <option value="">Select Organization</option>
+                                    @foreach ($organizations as $organization)
+                                    <option value="{{$organization->id}}">{{$organization->name}}</option>                                       
+                                    @endforeach
+                                  </select>
+
+                                @error('organization_id')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="phone" class="col-md-4 col-form-label text-md-end">{{ __('Phone') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="phone" type="number" class="form-control" name="phone">
+
+                                @error('phone')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
+                            <label for="address" class="col-md-4 col-form-label text-md-end">{{ __('Address') }}</label>
+
+                            <div class="col-md-6">
+                                <textarea name="address" class="form-control" id="address" cols="30" rows="5"></textarea>
+
+                                @error('address')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="row mb-3">
                             <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
 
                             <div class="col-md-6">
