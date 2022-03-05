@@ -25,7 +25,7 @@
                     data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static"
                     data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px"
                     data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
-                    <div class="rd-navbar-main-outer" style="background: #444;">
+                    <div class="rd-navbar-main-outer" >
                         <div class="rd-navbar-main" style="padding: 0px 0;">
                             <!-- RD Navbar Panel-->
                             <div class="rd-navbar-panel">
@@ -62,7 +62,7 @@
                             <div class="dropdown">
                                 <button class="btn btn-secondary dropdown-toggle button-primary" type="button"
                                     id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false">
+                                    aria-expanded="false" style="background: transparent">
                                     {{ Auth::user()->name }}
                                 </button>
                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">

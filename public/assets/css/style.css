@@ -1766,8 +1766,8 @@ hr {
 
 .button-primary, .button-primary:focus {
 	color: #ffffff;
-	background-color: #c20909;
-	border-color: #c20909;
+	background-color: #004c40;
+	border-color: #004c40;
 }
 
 .button-primary:hover, .button-primary:active {
@@ -3318,7 +3318,7 @@ ul.blog-post-meta li .icon {
 
 .breadcrumbs-custom-path a:hover,
 .breadcrumbs-custom-path li.active {
-	color: #c20909;
+	color: #004c40;
 }
 
 * + .breadcrumbs-custom-path {
@@ -5734,7 +5734,7 @@ html:not(.lt-ie10) .not-animated {
 	width: 50px;
 	height: 50px;
 	margin: 0 auto;
-	border: 3px solid #c20909;
+	border: 3px solid #004c40;
 	border-radius: 50%;
 	border-left-color: #e0e6ea;
 	border-bottom-color: #e0e6ea;
@@ -5763,7 +5763,7 @@ html:not(.lt-ie10) .not-animated {
 	line-height: 56px;
 	color: #ffffff;
 	overflow: hidden;
-	background: #c20909;
+	background: #004c40;
 	border-radius: 5px;
 	text-align: center;
 	text-decoration: none;
@@ -6094,7 +6094,7 @@ html.tablet .ui-to-top {
 }
 
 .rd-navbar-static .rd-nav-link:hover {
-	color: #c20909;
+	color: #004c40;
 }
 
 .rd-navbar-static .rd-menu {
