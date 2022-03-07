@@ -1,6 +1,6 @@
 
 
-/* primary : #00796B */
+/* primary : #004c40 */
  /* secondary : #5D4037 */
 
 .header {
@@ -39,7 +39,7 @@
 }
 
 .header__content__nav > a_active {
-    color: #00796B;
+    color: #004c40;
     background-color: transparent;
     border-color: transparent;
 }
@@ -49,7 +49,7 @@
     content: "";
     width: 100%;
     height: 7px;
-    background-color: #00796B;
+    background-color: #004c40;
     bottom: -11px;
     left: 0;
 }
@@ -131,13 +131,13 @@
   input:focus ~ label, input:valid ~ label    {
     top:-20px;
     font-size:14px;
-    color:#00796B;
+    color:#004c40;
   }
 
   select:focus ~ label, select:valid ~ label    {
     top:-20px;
     font-size:14px;
-    color:#00796B;
+    color:#004c40;
   }
 
   /* BOTTOM BARS ================================= */
@@ -148,7 +148,7 @@
     width:0;
     bottom:18px;
     position:absolute;
-    background:#00796B;
+    background:#004c40;
     transition:0.2s ease all;
     -moz-transition:0.2s ease all;
     -webkit-transition:0.2s ease all;
@@ -192,15 +192,15 @@
 
   /* ANIMATIONS ================ */
   @-webkit-keyframes inputHighlighter {
-    from { background:#00796B; }
+    from { background:#004c40; }
     to  { width:0; background:transparent; }
   }
   @-moz-keyframes inputHighlighter {
-    from { background:#00796B; }
+    from { background:#004c40; }
     to  { width:0; background:transparent; }
   }
   @keyframes inputHighlighter {
-    from { background:#00796B; }
+    from { background:#004c40; }
     to  { width:0; background:transparent; }
 }
 
@@ -264,7 +264,7 @@
   color: white;
   align-items: center;
   appearance: none;
-  background-color: #00796B;
+  background-color: #004c40;
   border-radius: 24px;
   border-style: none;
   box-shadow: rgba(0, 0, 0, .2) 0 3px 5px -1px,rgba(0, 0, 0, .14) 0 6px 10px 0,rgba(0, 0, 0, .12) 0 1px 18px 0;
@@ -296,7 +296,7 @@
 
 .app-button:hover {
   background: #F6F9FE;
-  color: #00796B;
+  color: #004c40;
 }
 
 .app-button:active {
@@ -306,7 +306,7 @@
 
 .app-button:focus {
   outline: none;
-  border: 2px solid #00796B;
+  border: 2px solid #004c40;
 }
 
 .app-button:not(:disabled) {
@@ -340,7 +340,7 @@
 .first-heading {
     font-weight: 300;
     font-size: 2rem;
-    color: #00796B;
+    color: #004c40;
     text-align: center;
     line-height: 1;
 }

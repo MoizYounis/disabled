@@ -29,7 +29,10 @@ class User extends Authenticatable
         'address',
         'is_active',
         'city',
-        'province_id'
+        'province_id',
+        'role',
+        'is_new',
+        'is_approved'
     ];
 
     /**

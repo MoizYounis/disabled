@@ -79,7 +79,8 @@ class RegisterController extends Controller
             'city' => $data['city'],
             'address' => $data['address'],
             'is_active' => 1,
-            'organization_id' => $data['category']
+            'organization_id' => $data['category'],
+            'role' => $data['category'] == 2 ? 'FIRM' : 'STORE'
         ]);
     }
 }
