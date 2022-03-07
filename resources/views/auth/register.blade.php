@@ -26,7 +26,7 @@
 
                 <h3 class="first-heading">Enter</h3>
                 <h5 class="second-heading">Registration Details</h5>
-
+                @include('flash-message')
                 <form method="POST" action="{{ route('register') }}">
                     @csrf
 
@@ -140,14 +140,14 @@
                             </div>
 
                             <?php
-                            $categories = \App\Models\OrganizationCategory::all();
+                            $organization = \App\Models\OrganizationCategory::all();
                             ?>
 
                             <div class="form__main__fields">
                                 <div class="group">
-                                    <select name="category" id="category" required style="margin-top: 2px; color: #000;">
+                                    <select name="organization_id" id="category" required style="margin-top: 2px; color: #000;">
                                         <option value="" selected style="color: #999">-- Registered As(Select Category) --</option>
-                                        @foreach ($categories as $item)
+                                        @foreach ($organization as $item)
                                         <option value="{{ $item->id }}" style="color: #5D4037">{{ $item->name }}</option>
                                         @endforeach
                                     </select>

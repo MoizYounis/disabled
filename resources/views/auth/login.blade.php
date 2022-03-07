@@ -42,7 +42,7 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
 
         <div class="card-secondary__body">
             <h4> Welcome <span> back</span> </h4>
-
+             @include('flash-message')
             <div class="card-secondary__body__content">
                 <form method="POST" action="{{ route('login') }}" style="margin-left: 70px;">
                     @csrf
