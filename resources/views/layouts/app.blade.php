@@ -48,7 +48,7 @@
 <body>
     <div id="app">
         @include('layouts.menu')
-        @yield('section')
+        @yield('section')`
         @include('layouts.footer')
     </div>
     <script src="{{asset('assets/js/core.min.js')}}"></script>
