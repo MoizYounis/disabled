@@ -54,16 +54,10 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    /**
-     * Get the categories that owns the User
-     *
-     * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
-     */
-    public function categories(): BelongsTo
+    public function setPasswordAttribute($value)
     {
-        return $this->belongsTo(OrganizationCategory::class, 'organization_id');
+        $this->attributes['password'] = bcrypt($value);
     }
-
 
     /**
      * Get the provinces that owns the User
