@@ -140,14 +140,14 @@
                             </div>
 
                             <?php
-                            $categories = \App\Models\OrganizationCategory::all();
+                            $roles = \App\Models\Role::all();
                             ?>
 
                             <div class="form__main__fields">
                                 <div class="group">
-                                    <select name="category" id="category" required style="margin-top: 2px; color: #000;">
-                                        <option value="" selected style="color: #999">-- Registered As(Select Category) --</option>
-                                        @foreach ($categories as $item)
+                                    <select name="role_id" id="role_id" required style="margin-top: 2px; color: #000;">
+                                        <option value="" selected style="color: #999">-- Registered As --</option>
+                                        @foreach ($roles as $item)
                                         <option value="{{ $item->id }}" style="color: #5D4037">{{ $item->name }}</option>
                                         @endforeach
                                     </select>
