@@ -20,9 +20,12 @@ class RoleController extends AppBaseController
      * @param RoleDataTable $roleDataTable
      * @return Response
      */
-    public function index(RoleDataTable $roleDataTable)
+    public function index()
     {
-        return $roleDataTable->render('roles.index');
+        $roles = Role::skipAdmin()->get();
+
+        return view('roles.index', compact('roles'));
+        // return $roleDataTable->render('roles.index');
     }
 
     /**
@@ -68,7 +71,6 @@ class RoleController extends AppBaseController
         $modules = Module::with(['permissions'])->get();
 
         $user_permissions = $role->permissions()->pluck('id')->toArray();
-
         return view('roles.show')->with([
             'role' => $role,
             'modules' => $modules,

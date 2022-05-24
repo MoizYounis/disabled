@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin\AdminAuthController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\BlogController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\HomeController;
@@ -24,21 +25,24 @@ Route::get('/',function(){
     return redirect()->route('admin');
 });
 
-Auth::routes();
+Route::get('home', [HomeController::class, 'index'])->name('home');
+Route::get('typography', [HomeController::class, 'typography'])->name('typography');
+Route::get('about', [HomeController::class, 'about'])->name('about');
+Route::get('contact', [HomeController::class, 'contact'])->name('contact');
+Route::get('profile', [ProfileController::class, 'index'])->name('profile');
 
-Route::get('login/admin', [AdminController::class, 'index']);
+Auth::routes();
 
 Route::group(['middleware' => ['auth']], function () {
     // Admin
     Route::get('/admin', [AdminController::class, 'index'])->name('admin');
     //Roles
-    Route::resource('admin/roles', RoleController::class);
+    Route::resource('roles', RoleController::class);
+    Route::post('roles/assign-permissions', [RoleController::class, 'assignPermissions'])->name('roles.assignPermissions');
 
-    Route::get('home', [HomeController::class, 'index'])->name('home');
-    Route::get('typography', [HomeController::class, 'typography'])->name('typography');
-    Route::get('about', [HomeController::class, 'about'])->name('about');
-    Route::get('contact', [HomeController::class, 'contact'])->name('contact');
-    Route::get('profile', [ProfileController::class, 'index'])->name('profile');
+    //Blog
+    Route::resource('blogs', BlogController::class);
+
 });
 
 

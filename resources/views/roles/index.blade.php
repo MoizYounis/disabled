@@ -7,20 +7,18 @@
         <div class="section-header">
             <h1>Roles</h1>
             {{--  <div class="section-header-breadcrumb">
-                @can('create-role')
-                <a href="{{ route('roles.create')}}" class="btn btn-primary form-btn">Role <i class="fas fa-plus"></i></a>
-                @endcan
+                    <a href="{{ route('roles.create') }}" class="btn btn-primary form-btn">Role <i
+                            class="fas fa-plus"></i></a>
             </div>  --}}
         </div>
-    <div class="section-body">
-        @include('flash::message')
-       <div class="card">
-            <div class="card-body">
-                @include('roles.table')
+        <div class="section-body">
+            @include('flash::message')
+            <div class="card">
+                <div class="card-body">
+                    @include('roles.table')
+                </div>
             </div>
-       </div>
-   </div>
+        </div>
 
     </section>
 @endsection
-

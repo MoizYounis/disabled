@@ -22,7 +22,7 @@
 <div class="form-group col-sm-12" style="margin-top: 50px;">
     {!! Form::hidden('role_id', $role->id) !!}
     {!! Form::submit('Save', ['class' => 'btn btn-primary submitBtn']) !!}
-    <a href="{{ route('items.index') }}" class="btn btn-light">Cancel</a>
+    <a href="{{ route('roles.index') }}" class="btn btn-light">Cancel</a>
 </div>
 
 {!! Form::close() !!}
