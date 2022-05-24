@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\Constant;
 use App\Models\Notification;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -10,6 +11,11 @@ class AdminController extends Controller
 {
     public function index()
     {
+        if (auth()->check()) {
+            if (auth()->user()->role != Constant::ADMIN) {
+                return redirect('home');
+            }
+        }
         $user = auth()->user();
 
         $total_users = User::count();

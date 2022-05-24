@@ -30,28 +30,29 @@
                     <div class="box-img-animate">
                         <div class="box-img-animate-item"
                             data-parallax-scroll="{&quot;y&quot;: 0, &quot;x&quot;: 140,  &quot;smoothness&quot;: 50 }">
-                            <img src="https://livedemo00.template-help.com/wt_51679/images/animate-img-1.jpg" alt="">
+                            <img src="{{ asset('assets/images/audi-nissen-COmEXrbCtf4-unsplash (1).jpg') }}" alt="">
                         </div>
                         <div class="box-img-animate-item"
                             data-parallax-scroll="{&quot;y&quot;: 150, &quot;x&quot;: 0,  &quot;smoothness&quot;: 50 }">
-                            <img src="https://livedemo00.template-help.com/wt_51679/images/animate-img-2.jpg" alt="">
+                            <img src="{{ asset('assets/images/jon-tyson-O7ke8N4kTpQ-unsplash.jpg') }}" alt="">
                         </div>
                         <div class="box-img-animate-item"
                             data-parallax-scroll="{&quot;y&quot;:70, &quot;x&quot;: -250,  &quot;smoothness&quot;: 50 }">
-                            <img src="https://livedemo00.template-help.com/wt_51679/images/animate-img-3.jpg" alt="">
+                            <img src="{{ asset('assets/images/josh-appel-0nkFvdcM-X4-unsplash.jpg') }}" alt="">
                         </div>
                         <div class="box-img-animate-item"
                             data-parallax-scroll="{&quot;y&quot;:20, &quot;x&quot;: 20,  &quot;smoothness&quot;: 50 }">
-                            <img src="https://livedemo00.template-help.com/wt_51679/images/animate-img-3.jpg" alt="">
+                            <img src="{{ asset('assets/images/thisisengineering-raeng-o6jUolZ7QJk-unsplash.jpg') }}" alt="">
+
                         </div>
                         <div class="box-img-animate-item"
                             data-parallax-scroll="{&quot;y&quot;:60, &quot;x&quot;: 70,  &quot;smoothness&quot;: 50 }">
-                            <img src="https://livedemo00.template-help.com/wt_51679/images/animate-img-4.jpg" alt="">
+                            <img src="{{ asset('assets/images/WhatsApp Image 2022-05-24 at 12.47.40 PM.jpeg') }}" alt="">
+
                         </div>
                         <div class="box-img-animate-item"
                             data-parallax-scroll="{&quot;y&quot;:0, &quot;x&quot;: 140,  &quot;smoothness&quot;: 50 }">
-                            <img src="https://livedemo00.template-help.com/wt_51679/images/animate-img-5.jpgs"
-                                alt="">
+                            <img src="{{ asset('assets/images/WhatsApp Image 2022-05-24 at 12.47.41 PM.jpeg') }}" alt="">
                         </div>
                     </div>
                 </div>

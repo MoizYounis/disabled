@@ -67,9 +67,14 @@
                                         {{--  {{ Auth::user()->name }}  --}}
                                     </button>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        @if (!Auth::user())
+                                        <a class="dropdown-item hello" href="{{ route('login') }}">Login</a>
+                                        <a class="dropdown-item hello" href="{{ route('register') }}">Register</a>
+                                        @endif
+                                        @if (Auth::user())
                                         <a class="dropdown-item hello" href="{{ route('profile') }}">Profile</a>
                                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                    document.getElementById('logout-form').submit();">
+                                            document.getElementById('logout-form').submit();">
                                             {{ __('Logout') }}
                                         </a>
 
@@ -77,9 +82,10 @@
                                             class="d-none">
                                             @csrf
                                         </form>
+                                        @endif
                                     </div>
+                                </div>
                             {{--  @endif  --}}
-                        </div>
                     </div>
             </div>
             </nav>
