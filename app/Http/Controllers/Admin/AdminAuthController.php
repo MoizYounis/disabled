@@ -12,12 +12,12 @@ use Illuminate\Support\Facades\Hash;
 
 class AdminAuthController extends Controller
 {
+
     private $_user;
     public function __construct(User $user)
     {
         $this->_user = $user;
     }
-
     public function login(Request $request)
     {
         $validator = Validator::make($request->input(), [
@@ -47,6 +47,6 @@ class AdminAuthController extends Controller
         }
 
         return redirect(route('admin'));
-       
+
     }
 }

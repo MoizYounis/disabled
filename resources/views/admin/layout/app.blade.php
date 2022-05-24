@@ -45,6 +45,9 @@
     <!-- BEGIN: Custom CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset('assets/assets/css/style.css') }}">
     <!-- END: Custom CSS-->
+    <!-- BEGIN: Datatables CSS-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.24/css/dataTables.bootstrap4.min.css">
+    <!-- END: Datatables CSS-->
 
 </head>
 <!-- END: Head-->
@@ -214,6 +217,10 @@
     <!-- BEGIN: Page JS-->
     <script src="{{ asset('assets/app-assets/js/scripts/pages/dashboard-ecommerce.js') }}"></script>
     <!-- END: Page JS-->
+    <!-- BEGIN: Datatables JS-->
+    <script src="https://cdn.datatables.net/1.10.24/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.24/js/dataTables.bootstrap4.min.js"></script>
+    <!-- END: Datatables JS-->
 
     <script>
         $(window).on('load', function() {

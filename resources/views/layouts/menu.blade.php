@@ -25,7 +25,7 @@
                     data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static"
                     data-lg-stick-up-offset="46px" data-xl-stick-up-offset="46px" data-xxl-stick-up-offset="46px"
                     data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
-                    <div class="rd-navbar-main-outer" >
+                    <div class="rd-navbar-main-outer">
                         <div class="rd-navbar-main" style="padding: 0px 0;">
                             <!-- RD Navbar Panel-->
                             <div class="rd-navbar-panel">
@@ -59,27 +59,29 @@
                                     </ul>
                                 </div>
                             </div>{{-- <a class="button button-primary button-sm" href="#">Donate</a> --}}
-                            <div class="dropdown">
-                                <button class="btn btn-secondary dropdown-toggle button-primary" type="button"
-                                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                    aria-expanded="false" style="background: transparent">
-                                    {{ Auth::user()->name }}
-                                </button>
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <a class="dropdown-item hello" href="{{ route('profile') }}">Profile</a>
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();
-                                                  document.getElementById('logout-form').submit();">
-                                     {{ __('Logout') }}
-                                 </a>
+                            {{--  @if (Auth::user())  --}}
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle button-primary" type="button"
+                                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false" style="background: transparent">
+                                        {{--  {{ Auth::user()->name }}  --}}
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item hello" href="{{ route('profile') }}">Profile</a>
+                                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                                            {{ __('Logout') }}
+                                        </a>
 
-                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                     @csrf
-                                 </form>
-                                </div>
-                            </div>
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                            class="d-none">
+                                            @csrf
+                                        </form>
+                                    </div>
+                            {{--  @endif  --}}
                         </div>
                     </div>
-                </nav>
             </div>
-        </header>
+            </nav>
+    </div>
+    </header>

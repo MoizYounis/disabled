@@ -37,6 +37,9 @@
                             data-feather="moon"></i></a></li>
                 <li class="nav-item dropdown dropdown-notification me-25"><a class="nav-link" href="#"
                         data-bs-toggle="dropdown"><i class="ficon" data-feather="bell"></i><span
+                        <?php
+                        $notifications = \App\Models\Notification::all();
+                        ?>
                             class="badge rounded-pill bg-danger badge-up">{{ $notifications->count() }}</span></a>
                     <ul class="dropdown-menu dropdown-menu-media dropdown-menu-end">
                         <li class="dropdown-menu-header">
@@ -144,7 +147,7 @@
                     <a class="nav-link dropdown-toggle dropdown-user-link" id="dropdown-user" href="#"
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         <div class="user-nav d-sm-flex d-none">
-                            <span class="user-name fw-bolder">{{ $user->name }}</span>
+                            <span class="user-name fw-bolder">{{ Auth::user()->name }}</span>
                             <span class="user-status">Admin</span>
                         </div>
                         <span class="avatar">
