@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\StoreController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -42,6 +43,9 @@ Route::group(['middleware' => ['auth']], function () {
 
     //Blog
     Route::resource('blogs', BlogController::class);
+
+    //Store
+    Route::resource('store', StoreController::class);
 
 });
 

@@ -89,7 +89,7 @@ class BlogController extends Controller
         $blog = Blog::find($id);
 
         if (empty($blog)) {
-            Flash::error('Zone not found');
+            Flash::error('Blog not found');
 
             return redirect(route('blogs.index'));
         }

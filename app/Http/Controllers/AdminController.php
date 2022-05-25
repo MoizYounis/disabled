@@ -11,11 +11,11 @@ class AdminController extends Controller
 {
     public function index()
     {
-        if (auth()->check()) {
-            if (auth()->user()->role != Constant::ADMIN) {
-                return redirect('home');
-            }
-        }
+        // if (auth()->check()) {
+        //     if (auth()->user()->role != Constant::ADMIN) {
+        //         return redirect('home');
+        //     }
+        // }
         $user = auth()->user();
 
         $total_users = User::count();
