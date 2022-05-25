@@ -1,3 +1,8 @@
+<div class="mb-1 col-sm-12">
+    {!! Form::label('heading', 'Heading Text:') !!}
+    {!! Form::text('heading', null, ['class' => 'form-control']) !!}
+</div>
+
 <!-- Blog Field -->
 <div class="mb-1 col-sm-12">
     {!! Form::label('blog', 'Write Your Blog:') !!}
