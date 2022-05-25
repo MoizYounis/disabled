@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\AdminAuthController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AllUsersController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\BlogController;
 use Illuminate\Support\Facades\Route;
@@ -46,6 +47,9 @@ Route::group(['middleware' => ['auth']], function () {
 
     //Store
     Route::resource('store', StoreController::class);
+
+    // All Users
+    Route::resource('all_users', AllUsersController::class);
 
 });
 
