@@ -38,4 +38,4 @@
         @endforeach
 
     </tbody>
-  </table>
+</table>
