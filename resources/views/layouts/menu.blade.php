@@ -48,7 +48,7 @@
                                                 Us</a>
                                         </li>
                                         <li class="rd-nav-item"><a class="rd-nav-link"
-                                                href="{{ route('typography') }}">Typography</a>
+                                                href="{{ route('typography') }}">Blogs</a>
                                         </li>
                                         <li class="rd-nav-item"><a class="rd-nav-link"
                                                 href="{{ route('contact') }}">Contacts</a>

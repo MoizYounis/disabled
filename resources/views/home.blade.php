@@ -30,29 +30,29 @@
                     <div class="box-img-animate">
                         <div class="box-img-animate-item"
                             data-parallax-scroll="{&quot;y&quot;: 0, &quot;x&quot;: 140,  &quot;smoothness&quot;: 50 }">
-                            <img src="{{ asset('assets/images/audi-nissen-COmEXrbCtf4-unsplash (1).jpg') }}" alt="">
+                            <img src="{{ asset('assets/images/audi-nissen-COmEXrbCtf4-unsplash (1).jpg') }}" alt="" style="max-width: 400px">
                         </div>
                         <div class="box-img-animate-item"
                             data-parallax-scroll="{&quot;y&quot;: 150, &quot;x&quot;: 0,  &quot;smoothness&quot;: 50 }">
-                            <img src="{{ asset('assets/images/jon-tyson-O7ke8N4kTpQ-unsplash.jpg') }}" alt="">
+                            <img src="{{ asset('assets/images/jon-tyson-O7ke8N4kTpQ-unsplash.jpg') }}" alt="" style="max-width: 500px">
                         </div>
                         <div class="box-img-animate-item"
                             data-parallax-scroll="{&quot;y&quot;:70, &quot;x&quot;: -250,  &quot;smoothness&quot;: 50 }">
-                            <img src="{{ asset('assets/images/josh-appel-0nkFvdcM-X4-unsplash.jpg') }}" alt="">
+                            <img src="{{ asset('assets/images/josh-appel-0nkFvdcM-X4-unsplash.jpg') }}" alt="" style="max-width: 300px">
                         </div>
                         <div class="box-img-animate-item"
                             data-parallax-scroll="{&quot;y&quot;:20, &quot;x&quot;: 20,  &quot;smoothness&quot;: 50 }">
-                            <img src="{{ asset('assets/images/thisisengineering-raeng-o6jUolZ7QJk-unsplash.jpg') }}" alt="">
+                            <img src="{{ asset('assets/images/thisisengineering-raeng-o6jUolZ7QJk-unsplash.jpg') }}" alt="" style="max-height: 400px">
 
                         </div>
                         <div class="box-img-animate-item"
                             data-parallax-scroll="{&quot;y&quot;:60, &quot;x&quot;: 70,  &quot;smoothness&quot;: 50 }">
-                            <img src="{{ asset('assets/images/WhatsApp Image 2022-05-24 at 12.47.40 PM.jpeg') }}" alt="">
+                            <img src="{{ asset('assets/images/WhatsApp Image 2022-05-24 at 12.47.40 PM.jpeg') }}" alt="" style="max-width: 300px">
 
                         </div>
                         <div class="box-img-animate-item"
                             data-parallax-scroll="{&quot;y&quot;:0, &quot;x&quot;: 140,  &quot;smoothness&quot;: 50 }">
-                            <img src="{{ asset('assets/images/WhatsApp Image 2022-05-24 at 12.47.41 PM.jpeg') }}" alt="">
+                            <img src="{{ asset('assets/images/WhatsApp Image 2022-05-24 at 12.47.41 PM.jpeg') }}" alt="" style="max-width: 400px">
                         </div>
                     </div>
                 </div>

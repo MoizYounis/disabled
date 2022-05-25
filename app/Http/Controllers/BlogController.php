@@ -47,7 +47,8 @@ class BlogController extends Controller
         /** @var Blog $blog */
         $blog = Blog::create([
             'user_id' => $user->id,
-            'blog' => $request->blog
+            'blog' => $request->blog,
+            'heading' => $request->heading
         ]);
 
         Flash::success('Blog saved successfully.');
