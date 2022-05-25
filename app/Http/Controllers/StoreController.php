@@ -129,7 +129,8 @@ class StoreController extends Controller
         }
 
         if($request->hasFile('image')) {
-            $image = $request->file('image')->store('images', 'public');
+            $store->image = $request->file('image')->store('images', 'public');
+            $store->save();
         }
 
         $user = auth()->user();
@@ -137,7 +138,6 @@ class StoreController extends Controller
          $store->update([
              'user_id' => $user->id,
              'name' => $request->name,
-             'image' => $image ?? null,
              'description' => $request->description
          ]);
 

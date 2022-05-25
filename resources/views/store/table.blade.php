@@ -13,7 +13,7 @@
         <tr>
             <th scope="row">{{$key + 1}}</th>
             <td>{{ $store->name }}</td>
-            <td><img src="{{ asset('storage/').$store->image }}" class="img-fluid" alt="{{$store->name}} Image"></td>
+            <td><img src="{{ asset('storage/'.$store->image) }}" width="20%" class="img-fluid" alt="{{$store->name}} Image"></td>
             <td>{{ $store->description }}</td>
             <td>
                 {{--  <a href="{{route('blogs.show', $blog->id)}}" class="action-btn">

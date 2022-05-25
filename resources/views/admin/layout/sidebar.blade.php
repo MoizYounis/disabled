@@ -8,14 +8,14 @@
     </li>
     <li class="nav-item">
         <a class="d-flex align-items-center {{ Route::is('blogs*') ? 'active' : '' }}" href="{{ route('blogs.index') }}">
-            <i data-feather="home"></i>
+            <i data-feather="bold"></i>
             <span class="menu-title text-truncate" data-i18n="Blogs">Blogs
             </span>
         </a>
     </li>
     <li class="nav-item">
         <a class="d-flex align-items-center {{ Route::is('store*') ? 'active' : '' }}" href="{{ route('store.index') }}">
-            <i data-feather="home"></i>
+            <i data-feather="package"></i>
             <span class="menu-title text-truncate" data-i18n="Store">Store
             </span>
         </a>
