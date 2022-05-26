@@ -150,7 +150,8 @@
                                             </div>
                                         </div>
                                         <div class="my-auto">
-                                            <h4 class="fw-bolder mb-0">{{ $new_users }}</h4>
+                                            <?php $stores = \App\Models\Store::count(); ?>
+                                            <h4 class="fw-bolder mb-0">{{ $stores }}</h4>
                                             <p class="card-text font-small-3 mb-0">Stores</p>
                                         </div>
                                     </div>

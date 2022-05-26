@@ -50,6 +50,8 @@ Route::group(['middleware' => ['auth']], function () {
 
     // All Users
     Route::resource('all_users', AllUsersController::class);
+    Route::get('approved_user/{id}', [AllUsersController::class, 'approvedUser'])->name('approved.user');
+    Route::post('reject_user/{id}', [AllUsersController::class, 'rejectUser'])->name('reject.user');
 
 });
 

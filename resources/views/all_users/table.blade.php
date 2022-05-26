@@ -18,6 +18,25 @@
             <td>{{ $user->address }}</td>
             <td>{{ $user->is_approved == 0 ? 'PENDING' : 'APPROVED' }}</td>
             <td>
+                @if ($user->is_approved == 0)
+                    <a href="{{ route('approved.user', $user->id) }}" class="action-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Approve">
+                        <i class="fas fa-check"></i>
+                    </a> &nbsp;
+                @endif
+                @if ($user->is_approved == 0)
+                    <a href="{{ route('reject.user', $user->id) }}" class="action-btn" style="color: red" data-bs-toggle="tooltip" data-bs-placement="top" title="Reject">
+                        <i class="fas fa-close"></i>
+                    </a>
+                @endif
+                <a href="{{ route('all_users.show', $user->id) }}" class="action-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="View Detail">
+                    <i class="fas fa-eye"></i>
+                </a>
+                <a href="{{ route('all_users.edit', $user->id) }}" class="action-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Edit">
+                    <i class="fas fa-edit"></i>
+                </a>
+                <a href="{{ route('all_users.destroy', $user->id) }}" class="action-btn" data-bs-toggle="tooltip" data-bs-placement="top" title="Delete">
+                    <i class="fas fa-trash"></i>
+                </a>
                 {{--  <a href="{{route('blogs.show', $blog->id)}}" class="action-btn">
                     <i class="fas fa-eye"></i>
                 </a>  --}}

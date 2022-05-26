@@ -16,6 +16,7 @@ class AdminController extends Controller
         //         return redirect('home');
         //     }
         // }
+
         $user = auth()->user();
 
         $total_users = User::count();
