@@ -9,12 +9,12 @@
                         <div class="card-body">
                             <h5>Welcome🎉 {{ $user->name }}!</h5>
                             <p class="card-text font-small-3">Handle the Statistics of your Portal! </p>
-                            <h3 class="mb-75 mt-2 pt-50">
+                            {{--  <h3 class="mb-75 mt-2 pt-50">
                                 <a href="#">$48.9k</a>
                             </h3>
                             <button type="button" class="btn btn-primary">View Profile</button>
                             <img src="../../../app-assets/images/illustration/badge.svg" class="congratulation-medal"
-                                alt="Medal Pic" />
+                                alt="Medal Pic" />  --}}
                         </div>
                     </div>
                 </div>

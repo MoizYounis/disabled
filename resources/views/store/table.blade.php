@@ -16,9 +16,9 @@
             <td><img src="{{ asset('storage/'.$store->image) }}" width="20%" class="img-fluid" alt="{{$store->name}} Image"></td>
             <td>{{ $store->description }}</td>
             <td>
-                {{--  <a href="{{route('blogs.show', $blog->id)}}" class="action-btn">
+                <a href="{{route('store.show', $store->id)}}" class="action-btn">
                     <i class="fas fa-eye"></i>
-                </a>  --}}
+                </a>
                 <a href="{{route('store.edit', $store->id)}}" class="action-btn">
                     <i class="fas fa-edit"></i>
                 </a>

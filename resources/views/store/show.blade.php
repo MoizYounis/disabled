@@ -1,13 +1,13 @@
-@extends('layouts.new_app')
+@extends('admin.layout.app')
 @section('title')
-    Zone Details 
+    Product Detail
 @endsection
 @section('content')
     <section class="section">
         <div class="section-header">
-        <h1>Zone Details</h1>
+        <h1>Product Detail</h1>
         <div class="section-header-breadcrumb">
-            <a href="{{ route('zones.index') }}"
+            <a href="{{ route('store.index') }}"
                  class="btn btn-primary form-btn float-right">Back</a>
         </div>
       </div>
@@ -15,7 +15,7 @@
     <div class="section-body">
            <div class="card">
             <div class="card-body">
-                    @include('zones.show_fields')
+                    @include('store.show_fields')
             </div>
             </div>
     </div>

@@ -3694,11 +3694,11 @@ ul.blog-post-meta li .icon {
 	background: #343333;
 }
 
-@media (min-width: 992px) {
+/* @media (min-width: 992px) {
 	.footer-minimal {
 		padding: 120px 0;
 	}
-}
+} */
 
 .footer-minimal .icon-bg-white {
 	background: rgba(255, 255, 255, 0.05);

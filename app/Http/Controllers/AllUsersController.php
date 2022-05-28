@@ -18,7 +18,7 @@ class AllUsersController extends Controller
      */
     public function index()
     {
-        $users = User::all();
+        $users = User::skipAdmin()->get();
         return view('all_users.index', compact('users'));
     }
 

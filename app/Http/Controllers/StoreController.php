@@ -16,7 +16,7 @@ class StoreController extends Controller
      */
     public function index()
     {
-        $stores = Store::all();
+        $stores = Store::where('user_id', auth()->user()->id)->latest()->get();
         return view('store.index', compact('stores'));
     }
 
@@ -132,11 +132,8 @@ class StoreController extends Controller
             $store->image = $request->file('image')->store('images', 'public');
             $store->save();
         }
-
-        $user = auth()->user();
          /** @var Store $store */
          $store->update([
-             'user_id' => $user->id,
              'name' => $request->name,
              'description' => $request->description
          ]);

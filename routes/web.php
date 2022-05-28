@@ -28,7 +28,9 @@ Route::get('/',function(){
 });
 
 Route::get('home', [HomeController::class, 'index'])->name('home');
-Route::get('typography', [HomeController::class, 'typography'])->name('typography');
+Route::get('blog', [HomeController::class, 'blogs'])->name('blog');
+Route::get('stores', [HomeController::class, 'stores'])->name('stores');
+Route::get('store/products/{id}', [HomeController::class, 'allProducts'])->name('allProducts');
 Route::get('about', [HomeController::class, 'about'])->name('about');
 Route::get('contact', [HomeController::class, 'contact'])->name('contact');
 Route::get('profile', [ProfileController::class, 'index'])->name('profile');

@@ -2,11 +2,14 @@
 
 namespace App\Models;
 
+use App\Models\Store;
+use App\Helpers\Constant;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Support\Facades\DB;
 use Spatie\Permission\Traits\HasRoles;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -55,6 +58,11 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function scopeSkipAdmin($query)
+    {
+        return $query->where('name', '!=', Constant::ADMIN);
+    }
+
     // public function setPasswordAttribute($value)
     // {
     //     $this->attributes['password'] = bcrypt($value);
@@ -68,6 +76,16 @@ class User extends Authenticatable
     public function provinces(): BelongsTo
     {
         return $this->belongsTo(Province::class, 'province_id');
+    }
+
+    /**
+     * Get all of the comments for the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function products(): HasMany
+    {
+        return $this->hasMany(Store::class, 'user_id');
     }
 
     public function saveOrganization($formData)
