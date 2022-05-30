@@ -62,22 +62,29 @@
                                     </ul>
                                 </div>
                             </div>{{-- <a class="button button-primary button-sm" href="#">Donate</a> --}}
-                            {{--  @if (Auth::user())  --}}
                                 <div class="dropdown">
                                     <button class="btn btn-secondary dropdown-toggle button-primary" type="button"
                                         id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="false" style="background: transparent">
-                                        {{--  {{ Auth::user()->name }}  --}}
+                                        @if (Session::has('user_auth'))
+                                        {{ Session::get('user_auth')['name'] }}
+                                        @endif
                                     </button>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        @if (!Auth::user())
-                                        <a class="dropdown-item hello" href="{{ route('login') }}">Login</a>
+                                        @if (!Session::has('user_auth'))
+                                        <a class="dropdown-item hello" href="{{ route('login') }}">Login As
+                                            <ul class="list-group">
+                                                <li class="list-group-item list-group-item-primary">Admin</li>
+                                                or
+                                                <li class="list-group-item list-group-item-dark">Organization</li>
+                                            </ul>
+                                        </a>
+                                        <a class="dropdown-item hello" href="{{ route('userLoginView') }}">Login As User</a>
                                         <a class="dropdown-item hello" href="{{ route('register') }}">Register</a>
                                         @endif
-                                        @if (Auth::user())
+                                        @if (Session::has('user_auth'))
                                         <a class="dropdown-item hello" href="{{ route('profile') }}">Profile</a>
-                                        <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                            document.getElementById('logout-form').submit();">
+                                        <a class="dropdown-item" href="{{ route('userLogout') }}">
                                             {{ __('Logout') }}
                                         </a>
 
@@ -88,7 +95,6 @@
                                         @endif
                                     </div>
                                 </div>
-                            {{--  @endif  --}}
                     </div>
             </div>
             </nav>

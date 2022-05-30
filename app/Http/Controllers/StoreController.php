@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Store;
 use Laracasts\Flash\Flash;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class StoreController extends Controller
 {
@@ -168,5 +169,12 @@ class StoreController extends Controller
         Flash::success('Product deleted successfully.');
 
         return redirect(route('store.index'));
+    }
+    public function productRequest($id) {
+        if(Session::has('user_auth')) {
+            return view('store.product_request');
+        } else {
+            return redirect(route('userLoginView'));
+        }
     }
 }

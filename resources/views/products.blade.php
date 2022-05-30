@@ -34,7 +34,7 @@
                                 <p class="card-text">{{ $product->description }}</p>
                             </div>
                             <div class="card-body">
-                                <a href="#" class="card-link">Request For Product</a>
+                                <a href="{{ route('product-request', $product->id) }}" class="card-link">Request For Product</a>
                             </div>
                         </div>
                     </div>
