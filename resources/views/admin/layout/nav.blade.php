@@ -10,7 +10,7 @@
             <ul class="nav navbar-nav align-items-center ms-auto">
                 <li class="nav-item d-none d-lg-block"><a class="nav-link nav-link-style"><i class="ficon"
                             data-feather="moon"></i></a></li>
-                <li class="nav-item dropdown dropdown-notification me-25"><a class="nav-link" href="#"
+                {{--  <li class="nav-item dropdown dropdown-notification me-25"><a class="nav-link" href="#"
                         data-bs-toggle="dropdown"><i class="ficon" data-feather="bell"></i><span
                         <?php
                         $notifications = \App\Models\Notification::all();
@@ -117,7 +117,7 @@
                         <li class="dropdown-menu-footer"><a class="btn btn-primary w-100" href="#">Read all
                                 notifications</a></li>
                     </ul>
-                </li>
+                </li>  --}}
                 <li class="nav-item dropdown dropdown-user">
                     <a class="nav-link dropdown-toggle dropdown-user-link" id="dropdown-user" href="#"
                         data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -136,8 +136,8 @@
                             <i class="me-50" data-feather="user"></i> Profile
                         </a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="page-account-settings-account.html">
-                            <i class="me-50" data-feather="settings"></i> Settings</a>
+                        {{--  <a class="dropdown-item" href="page-account-settings-account.html">
+                            <i class="me-50" data-feather="settings"></i> Settings</a>  --}}
                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                     document.getElementById('logout-form').submit();">
                             <i class="me-50" data-feather="power"></i> Logout
