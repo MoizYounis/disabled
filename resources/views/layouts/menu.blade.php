@@ -51,9 +51,6 @@
                                                 href="{{ route('blog') }}">Blogs</a>
                                         </li>
                                         <li class="rd-nav-item"><a class="rd-nav-link"
-                                                href="{{ route('stores') }}">Stores</a>
-                                        </li>
-                                        <li class="rd-nav-item"><a class="rd-nav-link"
                                                 href="{{ route('contact') }}">Contacts</a>
                                         </li>
                                         {{-- <li class="rd-nav-item"><a class="rd-nav-link"

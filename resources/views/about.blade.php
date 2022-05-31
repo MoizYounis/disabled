@@ -3,14 +3,14 @@
 About
 @endsection
 @section('section')
-    <section class="parallax-container" data-parallax-img="images/bg-breadcrumbs-about.jpg">
+    <section class="parallax-container" data-parallax-img="{{ asset('assets/images/about-us-l.jpg') }}">
         <div class="parallax-content breadcrumbs-custom context-dark">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12 col-lg-9">
                         <h2 class="breadcrumbs-custom-title">About Us</h2>
                         <ul class="breadcrumbs-custom-path">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="{{ route('home') }}">Home</a></li>
                             <li class="active">About Us</li>
                         </ul>
                     </div>
