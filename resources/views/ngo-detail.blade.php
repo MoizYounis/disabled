@@ -90,7 +90,7 @@
                 <li>14. GREEN CRESCENT TRUST</li>
             </ol>
             </p>
-            <h2>1. JDC Foundation Pakistan</h2>
+            <h3>1. JDC Foundation Pakistan</h3>
             <p>JDC organization was founded by Zafar Abbas. For the past 12 years, the JDC welfare organization is serving
                 all over Pakistan and almost in all areas of human development. The organization currently provides
                 charitable and welfare services like:
@@ -116,82 +116,82 @@
             <h4>Head Office: B-24 Federal B Area, Incholi.</h4>
             <h4 class="text-center my-3"><u>Contact Us</u></h4>
 
-            <h2>2. EDHI FOUNDATION</h2>
+            <h3>2. EDHI FOUNDATION</h3>
             <p>Founded by the great visionary Abdul Sattar Edhi, the foundation has provided support during testing times as
                 well. They have the biggest free ambulance service in the world; the foundation also offers orphan houses
                 and health care services to the needy.</p>
             <h4>Head Office: Sarafa Bazar, Bolton Market, Mithadar.</h4>
             <h4 class="text-center my-3"><u>Contact Us</u></h4>
 
-            <h2>3. AGA KHAN FOUNDATION</h2>
+            <h3>3. AGA KHAN FOUNDATION</h3>
             <p>Founded in 1967, the foundation has been providing health, financial and technical resources to marginalized groups throughout the world. The organization’s services include food security, education, and scholarship programs.</p>
             <h4>Head Office: SMS School, Karimabad.</h4>
             <h4 class="text-center my-3"><u>Contact Us</u></h4>
 
-            <h2>4. SAYLANI WELFARE TRUST</h2>
+            <h3>4. SAYLANI WELFARE TRUST</h3>
             <p>Saylani Trust has been operational since 1999; since then, the organization has provided relief to thousands of people through its services. The trust has an active dastarkhwan campaign as well as an RO plant installation campaign to provide the most basic necessity to the needy. Their education services provide education facilities to 180,000 students annually.</p>
             <h4>Head Office: Grappetite Chowrangi, Bahadurabad.</h4>
             <h4 class="text-center my-3"><u>Contact Us</u></h4>
 
-            <h2>5. ANSAR BURNEY TRUST</h2>
+            <h3>5. ANSAR BURNEY TRUST</h3>
             <p>Since the 80s, the trust has paid incredible attention to protecting the sovereignty of humans. The organization focuses strongly on protecting human rights and is always at the forefront to speak against any human rights violation.</p>
             <h4>Head Office: 6 Hasan Manzil, Arambagh Road.</h4>
             <h4 class="text-center my-3"><u>Contact Us</u></h4>
 
-            <h2>6. DAR-UL-SUKUN</h2>
+            <h3>6. DAR-UL-SUKUN</h3>
             <p>Since the 80s, the trust has paid incredible attention to protecting the sovereignty of humans. The organization focuses strongly on protecting human rights and is always at the forefront to speak against any human rights violation.</p>
             <h4>Head Office: Kashmir Road Block3, PECHS.</h4>
             <h4 class="text-center my-3"><u>Contact Us</u></h4>
 
-            <h2>7. WAR (War against Rape)</h2>
+            <h3>7. WAR (War against Rape)</h3>
             <p>Founded in 1989by associates of WAF, WAR focuses on the taboo subject of rape. The organization helps provide mental and judicial support to the rape victims as well as call out harassment cultures. The organization, due to its taboo objective, has been scrutinized by the public numerous times.
             </p>
             <h4>Head Office:  Office#102 Pearl Crest, 18th C4 commercial lane, Zamzama Blvd.</h4>
             <h4 class="text-center my-3"><u>Contact Us</u></h4>
 
-            <h2>8. AKHUWAT FOUNDATION</h2>
+            <h3>8. AKHUWAT FOUNDATION</h3>
             <p>The organization helps people by providing them with interest-free loans. The organization also has a cloth bank that provides clothing to the necessary. Other than that, they have affordable health services to help the needy as well.
             </p>
             <h4>Head Office: 19 Civic Center, Sector A2</h4>
             <h4 class="text-center my-3"><u>Contact Us</u></h4>
 
-            <h2>9. KASHF FOUNDATION</h2>
+            <h3>9. KASHF FOUNDATION</h3>
             <p>The foundation started in 1996 as a microfinancing institution. The organization aims to provide financial services, including loans, to women who want to become independent and start their own businesses.
             </p>
             <h4>Head Office: 19 Aibak Block, New Garden town.</h4>
             <h4 class="text-center my-3"><u>Contact Us</u></h4>
 
-            <h2>10. CHIPPA WELFARE ASSOCIATION</h2>
+            <h3>10. CHIPPA WELFARE ASSOCIATION</h3>
             <p>Founded by Ramzan Chippa, the foundation is one of the biggest groups of volunteers in the country. Their services include ambulances, graveyards, dastarkhwan, orphanages, and ration distribution.
             </p>
             <h4>Head Office: Plot#ZC-5, Sector 8/A, Shahrah Faisal.</h4>
             <h4 class="text-center my-3"><u>Contact Us</u></h4>
 
-            <h2>11. AL-KHIDMAT FOUNDATION</h2>
+            <h3>11. AL-KHIDMAT FOUNDATION</h3>
             <p>Founded in 1980, the foundation has been providing humanitarian services such as orphan care, disaster management, ration packages, and ambulance services. There have been more than 2 million beneficiaries of their services.
             </p>
             <h4>Head Office: 501, Quaideen Colony.</h4>
             <h4 class="text-center my-3"><u>Contact Us</u></h4>
 
-            <h2>12. AURAT FOUNDATION</h2>
+            <h3>12. AURAT FOUNDATION</h3>
             <p>Founded in 1986, the organization tackles the issues and challenges faced by women in society. The organization has raised awareness as well as provided help to women who are suffering due to inequality in society.
             </p>
             <h4>Head Office: Building No. D-1, Street NO.11, G-11/1.</h4>
             <h4 class="text-center my-3"><u>Contact Us</u></h4>
 
-            <h2>13. AMAN FOUNDATION</h2>
+            <h3>13. AMAN FOUNDATION</h3>
             <p>The organization aims to develop social and economic equality. The organization provides education and training facilities to the deserving so they can fulfill their true potentials. The organization also has a large fleet of state of the art ambulances.
             </p>
             <h4>Head Office: PECHS Ext. Block 6.</h4>
             <h4 class="text-center my-3"><u>Contact Us</u></h4>
 
-            <h2>14. TCF</h2>
+            <h3>14. TCF</h3>
             <p>The organization was started with the aim of providing quality education to the underprivileged. Currently, the organization has more than 1600 schools under operation that provide education to the deserved.
             </p>
             <h4>Head Office: Plot#20, Brookes Chowrangi.</h4>
             <h4 class="text-center my-3"><u>Contact Us</u></h4>
 
-            <h2>15. GREEN CRESCENT TRUST</h2>
+            <h3>15. GREEN CRESCENT TRUST</h3>
             <p>Founded with the goal of providing education GTC established its first school in 1994. The organization now has more than 150 schools and focuses on empowering females as well. The organization also operates orphanages.
             </p>
             <h4>Head Office: Office 310-311, Plot E1, Jinnah Housing Society, PECHS.</h4>
