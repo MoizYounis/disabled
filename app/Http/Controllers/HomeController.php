@@ -64,4 +64,7 @@ class HomeController extends Controller
         }
         return view('products', compact('products'));
     }
+    public function ngoDetail(){
+        return view('ngo-detail');
+    }
 }

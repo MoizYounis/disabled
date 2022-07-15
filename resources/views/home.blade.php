@@ -35,16 +35,15 @@
                 <div class="col-lg-6 col-xl-5">
                     <div class="innset-xl-left-70">
                         <h3>Our Mission</h3>
-                        <p class="text-opacity-80">Our organization pursues several goals that can be identified as
-                            our mission. Learn more about them below.</p>
+                        <p class="text-opacity-80">Our mission is to raise awareness of disabled people's rights by providing information on all of their rights under the United Nations Sustainable Development Goals. </p>
                         <div class="row row-50">
                             <div class="col-md-6 col-lg-12">
                                 <div class="box-icon-modern">
                                     <div class="box-icon-inner decorate-triangle"><span
                                             class="icon-xl linearicons-baby2 icon-primary"></span></div>
                                     <div class="box-icon-caption">
-                                        <h4><a href="#">Saving People</a></h4>
-                                        <p>Our main mission is to save and rescue permanently disabled People.</p>
+                                        <h4><a href="#">Aware People</a></h4>
+                                        <p>We want to aware and  help the people by providing the information of different institutes ,NGOs ,Schools and Stores that are working for persons with disabilities.</p>
                                     </div>
                                 </div>
                             </div>
@@ -54,12 +53,12 @@
                                             class="icon-xl linearicons-sun icon-primary"></span></div>
                                     <div class="box-icon-caption">
                                         <h4><a href="#">Peace On The Planet</a></h4>
-                                        <p>By working with our partners, we aim to establish peaceful relationships.
+                                        <p>By working with our partners, we aim to establish peaceful relationships with persons with disabilities.
                                         </p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-6 col-lg-12">
+                            {{--  <div class="col-md-6 col-lg-12">
                                 <div class="box-icon-modern">
                                     <div class="box-icon-inner decorate-rectangle"><span
                                             class="icon-xl linearicons-umbrella2 icon-primary"></span></div>
@@ -69,7 +68,7 @@
                                             Pakistan.</p>
                                     </div>
                                 </div>
-                            </div>
+                            </div>  --}}
                         </div>
                     </div>
                 </div>
@@ -91,7 +90,7 @@
                     <div class="wow fadeInUp">
                         <article class="box-causes">
                             <div class="box-causes-img"><img src="{{ asset('assets/images/ngo-new.jpg') }}" alt="" width="372"
-                                style="height:200px" /><a class="button button-sm button-primary" href="#">See All</a>
+                                style="height:200px" /><a class="button button-sm button-primary" href="{{ route('ngo-detail') }}">See All</a>
                             </div>
                             <h4 class="font-weight-medium"><a href="#">NGO</a></h4>
                             {{--  <p class="box-causes-donate"><span class="box-causes-donate-complete">$92,160</span> of
@@ -103,7 +102,7 @@
                 <div class="col-md-6 col-lg-3 wow-outer">
                     <div class="wow fadeInUp">
                         <article class="box-causes">
-                            <div class="box-causes-img"><img src="{{ asset('assets/images/school.webp') }}" alt=""
+                            <div class="box-causes-img"><img src="{{ asset('assets/images/school-new.jpg') }}" alt=""
                                     width="372" style="height:200px" /><a class="button button-sm button-primary"
                                     href="#">See All</a>
                             </div>
