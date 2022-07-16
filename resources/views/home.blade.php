@@ -104,7 +104,7 @@
                         <article class="box-causes">
                             <div class="box-causes-img"><img src="{{ asset('assets/images/school-new.jpg') }}" alt=""
                                     width="372" style="height:200px" /><a class="button button-sm button-primary"
-                                    href="#">See All</a>
+                                    href="{{ route('school-detail') }}">See All</a>
                             </div>
                             <h4 class="font-weight-medium"><a href="#">Schools</a></h4>
                             {{--  <p class="box-causes-donate"><span class="box-causes-donate-complete">$52,380</span> of
@@ -117,7 +117,7 @@
                     <div class="wow fadeInUp">
                         <article class="box-causes">
                             <div class="box-causes-img"><img src="{{ asset('assets/images/hospital.jpg') }}" alt="" width="372"
-                                style="height:200px" /><a class="button button-sm button-primary" href="#">See All</a>
+                                style="height:200px" /><a class="button button-sm button-primary" href="{{ route('hospital-detail') }}">See All</a>
                             </div>
                             <h4 class="font-weight-medium"><a href="#">Hospitals</a></h4>
                             {{--  <p class="box-causes-donate"><span class="box-causes-donate-complete">$42,280</span> of
@@ -130,9 +130,9 @@
                     <div class="wow fadeInUp">
                         <article class="box-causes">
                             <div class="box-causes-img"><img src="{{ asset('assets/images/store.jpg') }}" alt="" width="372"
-                                style="height:200px" /><a class="button button-sm button-primary" href="{{ route('stores') }}">See All</a>
+                                style="height:200px" /><a class="button button-sm button-primary" href="{{ route('store-detail') }}">See All</a>
                             </div>
-                            <h4 class="font-weight-medium"><a href="{{ route('stores') }}">Stores</a></h4>
+                            <h4 class="font-weight-medium"><a href="{{ route('store-detail') }}">Stores</a></h4>
                             {{--  <p class="box-causes-donate"><span class="box-causes-donate-complete">$42,280</span> of
                                 <span>$45,000</span> raised
                             </p>  --}}

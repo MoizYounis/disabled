@@ -62,7 +62,10 @@ Route::post('user/login', [UserLoginController::class, 'userLogin'])->name('user
 
 Route::get('home', [HomeController::class, 'index'])->name('home');
 Route::get('blog', [HomeController::class, 'blogs'])->name('blog');
-Route::get('NGO/Detail', [HomeController::class, 'ngoDetail'])->name('ngo-detail');
+Route::get('Read-About/NGOs', [HomeController::class, 'ngoDetail'])->name('ngo-detail');
+Route::get('Read-About/Schools', [HomeController::class, 'schoolDetail'])->name('school-detail');
+Route::get('Read-About/Hospital', [HomeController::class, 'hospitalDetail'])->name('hospital-detail');
+Route::get('Read-About/Stores', [HomeController::class, 'storeDetail'])->name('store-detail');
 Route::get('stores', [HomeController::class, 'stores'])->name('stores');
 Route::get('store/products/{id}', [HomeController::class, 'allProducts'])->name('allProducts');
 Route::get('about', [HomeController::class, 'about'])->name('about');

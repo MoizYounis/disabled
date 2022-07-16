@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-    NGO Detail
+    Read About NGOs
 @endsection
 @section('section')
     <!-- Swiper-->
@@ -32,7 +32,7 @@
                 <div class="row row-50 justify-content-lg-center align-items-lg-center">
                     <div class="col-lg-12">
                         <div class="bunner-content-modern text-center">
-                            <h1 class="main-bunner-title">Non Governmental Organization</h1>
+                            <h1 class="main-bunner-title">Read About NGOs</h1>
                             {{-- <p>A hero is an ordinary individual who finds the strength to persevere and endure in spite of overwhelming obstacles.</p> --}}
                         </div>
                     </div>
@@ -71,7 +71,7 @@
                 be organized and operated on variable levels, including local, national, or even international.</p>
             <p>
             <ul>
-                <li> <a href="https://jdcwelfare.org" style="font-size:20px"><u>JDC Foundation Pakistan</u></a></li>
+                <li> <a href="https://jdcwelfare.org" style="font-size:20px"><u>⦁ JDC Foundation Pakistan</u></a></li>
             </ul>
             <ol>
                 <li>1. EDHI FOUNDATION</li>

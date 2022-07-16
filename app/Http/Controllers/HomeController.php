@@ -67,4 +67,14 @@ class HomeController extends Controller
     public function ngoDetail(){
         return view('ngo-detail');
     }
+
+    public function schoolDetail(){
+        return view('school-detail');
+    }
+    public function hospitalDetail(){
+        return view('hospital-detail');
+    }
+    public function storeDetail(){
+        return view('store-detail');
+    }
 }

@@ -74,7 +74,8 @@
                                     <div class="d-flex flex-row">
                                         <div class="avatar bg-light-success me-2">
                                             <div class="avatar-content">
-                                                <i data-feather="dollar-sign" class="avatar-icon"></i>
+                                                {{--  <i data-feather="dollar-sign" class="avatar-icon"></i>  --}}
+                                                N
                                             </div>
                                         </div>
                                         <div class="my-auto">
@@ -146,7 +147,7 @@
                                     <div class="d-flex flex-row">
                                         <div class="avatar bg-light-success me-2">
                                             <div class="avatar-content">
-                                                <i data-feather="dollar-sign" class="avatar-icon"></i>
+                                                <i class="fa-solid fa-store"></i>
                                             </div>
                                         </div>
                                         <div class="my-auto">
