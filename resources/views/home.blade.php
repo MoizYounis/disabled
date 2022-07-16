@@ -90,9 +90,9 @@
                     <div class="wow fadeInUp">
                         <article class="box-causes">
                             <div class="box-causes-img"><img src="{{ asset('assets/images/ngo-new.jpg') }}" alt="" width="372"
-                                style="height:200px" /><a class="button button-sm button-primary" href="{{ route('ngo-detail') }}">See All</a>
+                                style="height:200px" /><a class="button button-sm button-primary" href="{{ route('ngo-detail') }}">Read More</a>
                             </div>
-                            <h4 class="font-weight-medium"><a href="#">NGO</a></h4>
+                            <h4 class="font-weight-medium"><a href="{{ route('ngo-detail') }}">NGO</a></h4>
                             {{--  <p class="box-causes-donate"><span class="box-causes-donate-complete">$92,160</span> of
                                 <span>$100,000</span> raised
                             </p>  --}}
@@ -104,9 +104,9 @@
                         <article class="box-causes">
                             <div class="box-causes-img"><img src="{{ asset('assets/images/school-new.jpg') }}" alt=""
                                     width="372" style="height:200px" /><a class="button button-sm button-primary"
-                                    href="{{ route('school-detail') }}">See All</a>
+                                    href="{{ route('school-detail') }}">Read More</a>
                             </div>
-                            <h4 class="font-weight-medium"><a href="#">Schools</a></h4>
+                            <h4 class="font-weight-medium"><a href="{{ route('school-detail') }}">Schools</a></h4>
                             {{--  <p class="box-causes-donate"><span class="box-causes-donate-complete">$52,380</span> of
                                 <span>$55,000</span> raised
                             </p>  --}}
@@ -117,9 +117,9 @@
                     <div class="wow fadeInUp">
                         <article class="box-causes">
                             <div class="box-causes-img"><img src="{{ asset('assets/images/hospital.jpg') }}" alt="" width="372"
-                                style="height:200px" /><a class="button button-sm button-primary" href="{{ route('hospital-detail') }}">See All</a>
+                                style="height:200px" /><a class="button button-sm button-primary" href="{{ route('hospital-detail') }}">Read More</a>
                             </div>
-                            <h4 class="font-weight-medium"><a href="#">Hospitals</a></h4>
+                            <h4 class="font-weight-medium"><a href="{{ route('hospital-detail') }}">Hospitals</a></h4>
                             {{--  <p class="box-causes-donate"><span class="box-causes-donate-complete">$42,280</span> of
                                 <span>$45,000</span> raised
                             </p>  --}}
@@ -130,7 +130,7 @@
                     <div class="wow fadeInUp">
                         <article class="box-causes">
                             <div class="box-causes-img"><img src="{{ asset('assets/images/store.jpg') }}" alt="" width="372"
-                                style="height:200px" /><a class="button button-sm button-primary" href="{{ route('store-detail') }}">See All</a>
+                                style="height:200px" /><a class="button button-sm button-primary" href="{{ route('store-detail') }}">Read More</a>
                             </div>
                             <h4 class="font-weight-medium"><a href="{{ route('store-detail') }}">Stores</a></h4>
                             {{--  <p class="box-causes-donate"><span class="box-causes-donate-complete">$42,280</span> of

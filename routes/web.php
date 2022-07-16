@@ -66,6 +66,7 @@ Route::get('Read-About/NGOs', [HomeController::class, 'ngoDetail'])->name('ngo-d
 Route::get('Read-About/Schools', [HomeController::class, 'schoolDetail'])->name('school-detail');
 Route::get('Read-About/Hospital', [HomeController::class, 'hospitalDetail'])->name('hospital-detail');
 Route::get('Read-About/Stores', [HomeController::class, 'storeDetail'])->name('store-detail');
+Route::get('UNOs/SDGs/Rules', [HomeController::class, 'sdgsDetail'])->name('sdgs-detail');
 Route::get('stores', [HomeController::class, 'stores'])->name('stores');
 Route::get('store/products/{id}', [HomeController::class, 'allProducts'])->name('allProducts');
 Route::get('about', [HomeController::class, 'about'])->name('about');

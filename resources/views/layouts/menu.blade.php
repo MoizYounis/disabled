@@ -51,32 +51,33 @@
                                                 href="{{ route('blog') }}">Blogs</a>
                                         </li>
                                         <li class="rd-nav-item"><a class="rd-nav-link"
-                                                href="{{ route('contact') }}">Contacts</a>
+                                                href="{{ route('sdgs-detail') }}" style="color: red">UNO's <br> SDG's Rules </a>
                                         </li>
-                                        {{-- <li class="rd-nav-item"><a class="rd-nav-link"
-                                            href="{{ route('register') }}">Register Now</a>
-                                         </li> --}}
+                                        <li class="rd-nav-item"><a class="rd-nav-link"
+                                                href="{{ route('contact') }}">Contact Us</a>
+                                        </li>
                                     </ul>
                                 </div>
                             </div>{{-- <a class="button button-primary button-sm" href="#">Donate</a> --}}
                                 <div class="dropdown">
                                     <button class="btn btn-secondary dropdown-toggle button-primary" type="button"
                                         id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="false" style="background: transparent">
+                                        aria-expanded="false" style="background: transparent; color:red; ">
                                         @if (Session::has('user_auth'))
                                         {{ Session::get('user_auth')['name'] }}
+                                        @else
+                                        Login As
                                         @endif
                                     </button>
                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                         @if (!Session::has('user_auth'))
-                                        <a class="dropdown-item hello" href="{{ route('login') }}">Login As
-                                            <ul class="list-group">
-                                                <li class="list-group-item list-group-item-primary">Admin</li>
-                                                or
-                                                <li class="list-group-item list-group-item-dark">Organization</li>
+                                        <a class="dropdown-item hello" href="{{ route('login') }}">
+                                            <ul class="">
+                                                <li class="">Organization</li>
+                                                {{--  <li class="">Organization</li>  --}}
                                             </ul>
                                         </a>
-                                        <a class="dropdown-item hello" href="{{ route('userLoginView') }}">Login As User</a>
+                                        <a class="dropdown-item hello" href="{{ route('userLoginView') }}">User | Disabled</a>
                                         <a class="dropdown-item hello" href="{{ route('register') }}">Register</a>
                                         @endif
                                         @if (Session::has('user_auth'))

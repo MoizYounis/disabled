@@ -77,4 +77,7 @@ class HomeController extends Controller
     public function storeDetail(){
         return view('store-detail');
     }
+    public function sdgsDetail(){
+        return view('sdgs-detail');
+    }
 }

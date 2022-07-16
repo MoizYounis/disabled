@@ -25,7 +25,7 @@
     </style>
     <section class="section section-lg section-main-bunner section-main-bunner-filter">
         <div class="main-bunner-img"
-            style="background-image: url(&quot;{{ asset('assets/images/ngo-new.jpg') }}&quot;); background-size: cover;">
+            style="background-image: url(&quot;{{ asset('assets/images/ngo-detail.jpeg') }}&quot;); background-size: cover;">
         </div>
         <div class="main-bunner-inner">
             <div class="container">
