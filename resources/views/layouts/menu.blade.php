@@ -56,10 +56,21 @@
                                         <li class="rd-nav-item"><a class="rd-nav-link"
                                                 href="{{ route('contact') }}">Contact Us</a>
                                         </li>
+                                        <li class="rd-nav-item">
+                                            <?php $roles = \App\Models\Role::where('name', '!=', \App\Utils\Constant::ADMIN)->get();?>
+                                            <select name="" id="" class="form-control form-select" style="background: transparent; color:white">
+                                                <option style="background: white; color:black" value="">Search</option>
+                                                @foreach ($roles as $role)
+                                                
+                                                <option style="background: white; color:black" value="{{ $role->name }}">{{ $role->name }}</option>
+                                                @endforeach
+                                            </select>
+                                        </li>
                                     </ul>
                                 </div>
-                            </div>{{-- <a class="button button-primary button-sm" href="#">Donate</a> --}}
+                            </div>
                                 <div class="dropdown">
+                                    <a class="button button-primary button-sm" style="background-color: #c20909" href="#">Donate</a>
                                     <button class="btn btn-secondary dropdown-toggle button-primary" type="button"
                                         id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="false" style="background: transparent; color:red; ">
