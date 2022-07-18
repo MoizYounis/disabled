@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-{{ $name->role }}
+{{ $name->role ?? 'Organization' }}
 @endsection
 @section('section')
     <!-- Swiper-->
@@ -23,7 +23,7 @@
                 <div class="row row-50 justify-content-lg-center align-items-lg-center">
                     <div class="col-lg-12">
                         <div class="bunner-content-modern text-center">
-                            <h1 class="main-bunner-title">{{ $name->role }}</h1>
+                            <h1 class="main-bunner-title">{{ $name->role ?? 'Organization' }}</h1>
                             {{-- <p>A hero is an ordinary individual who finds the strength to persevere and endure in spite of overwhelming obstacles.</p> --}}
                         </div>
                     </div>
