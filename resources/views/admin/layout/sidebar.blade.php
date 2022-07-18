@@ -20,38 +20,18 @@
             </span>
         </a>
     </li>
-    @can('role-view')
+    {{--  @can('role-view')
     <li class=" nav-item"><a class="d-flex align-items-center {{ Route::is('roles*') ? 'active' : '' }}" href="{{ route('roles.index') }}"><i
         data-feather="shield"></i><span class="menu-title text-truncate"
         data-i18n="Roles">Roles</span></a>
     </li>
-    @endcan
+    @endcan  --}}
     @can('users-view')
     <li class=" nav-item">
-        <a class="d-flex align-items-center " href="#">
+        <a class="d-flex align-items-center {{ Route::is('all_users.index*') ? 'active' : '' }}" href="{{ route('all_users.index') }}">
             <i data-feather="user"></i>
             <span class="menu-title text-truncate" data-i18n="Users">Users</span>
         </a>
-        <ul class="menu-content">
-            <li>
-                <a class="d-flex align-items-center" href="{{ route('all_users.index') }}">
-                    <i data-feather="circle"></i>
-                    <span class="menu-item text-truncate" data-i18n="Roles">All users</span>
-                </a>
-            </li>
-            <li>
-                <a class="d-flex align-items-center" href="#">
-                    <i data-feather="circle"></i>
-                    <span class="menu-item text-truncate" data-i18n="Roles">Roles</span>
-                </a>
-            </li>
-            <li>
-                <a class="d-flex align-items-center" href="#">
-                    <i data-feather="circle"></i>
-                    <span class="menu-item text-truncate" data-i18n="Permission">Permission</span>
-                </a>
-            </li>
-        </ul>
     </li>
     @endcan
 </ul>

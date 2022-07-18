@@ -2,12 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Province;
 use App\Models\Role;
 use App\Models\User;
+use App\Utils\Constant;
+use App\Models\Province;
+use Laracasts\Flash\Flash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
-use Laracasts\Flash\Flash;
 
 class AllUsersController extends Controller
 {
@@ -18,7 +19,7 @@ class AllUsersController extends Controller
      */
     public function index()
     {
-        $users = User::all();
+        $users = User::where('role', '!=', Constant::ADMIN)->get();
         return view('all_users.index', compact('users'));
     }
 

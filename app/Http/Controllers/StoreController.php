@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Store;
 use Laracasts\Flash\Flash;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 
 class StoreController extends Controller
 {
@@ -16,7 +17,7 @@ class StoreController extends Controller
      */
     public function index()
     {
-        $stores = Store::all();
+        $stores = Store::where('user_id', auth()->user()->id)->latest()->get();
         return view('store.index', compact('stores'));
     }
 
@@ -132,11 +133,8 @@ class StoreController extends Controller
             $store->image = $request->file('image')->store('images', 'public');
             $store->save();
         }
-
-        $user = auth()->user();
          /** @var Store $store */
          $store->update([
-             'user_id' => $user->id,
              'name' => $request->name,
              'description' => $request->description
          ]);
@@ -171,5 +169,12 @@ class StoreController extends Controller
         Flash::success('Product deleted successfully.');
 
         return redirect(route('store.index'));
+    }
+    public function productRequest($id) {
+        if(Session::has('user_auth')) {
+            return view('store.product_request');
+        } else {
+            return redirect(route('userLoginView'));
+        }
     }
 }

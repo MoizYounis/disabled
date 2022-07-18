@@ -10,7 +10,7 @@ class ProfileController extends Controller
     public function index()
     {
         $user_id = auth()->user()->id;
-        $user = User::with('categories')->find($user_id);
+        $user = User::find($user_id);
         return view('layouts.profile.index', compact('user'));
     }
 }
