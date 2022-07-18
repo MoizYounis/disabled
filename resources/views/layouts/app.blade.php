@@ -25,6 +25,9 @@
     <link rel="stylesheet" href="{{asset('assets/css/fonts.css')}}">
     <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
     <link rel="stylesheet" href="{{ asset('assets/css/button.css') }}">
+    <!-- BEGIN: Datatables CSS-->
+    <link href="https://cdn.datatables.net/1.11.4/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <!-- END: Datatables CSS-->
 
     <style>
         .ie-panel {
@@ -53,6 +56,13 @@
     </div>
     <script src="{{asset('assets/js/core.min.js')}}"></script>
     <script src="{{asset('assets/js/script.js')}}"></script>
+    <!-- BEGIN: Datatables JS-->
+    <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            $('#myTable').DataTable();
+        });
+    </script>
     @stack('scripts')
 </body>
 </html>

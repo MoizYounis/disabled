@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
+use App\Models\Role;
 use App\Providers\RouteServiceProvider;
 use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -29,7 +30,8 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    // protected $redirectTo = RouteServiceProvider::HOME;
+    protected $redirectTo = '/home';
 
     /**
      * Create a new controller instance.
@@ -64,6 +66,7 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
+        $roles = Role::where('id', $data['role_id'])->first();
             $user = User::create([
             'name' => $data['first_name'] . ' ' . $data['last_name'],
             'email' => $data['email'],
@@ -73,7 +76,7 @@ class RegisterController extends Controller
             'city' => $data['city'],
             'address' => $data['address'],
             'is_active' => 1,
-            'role' => $data['role_id'] == 2 ? 'FIRM' : 'STORE'
+            'role' => $roles->name
         ]);
         $user->assignRole($data['role_id']);
         return $user;

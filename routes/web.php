@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RoleController;
+use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\UserLoginController;
 use Illuminate\Support\Facades\Auth;
@@ -47,6 +48,9 @@ Route::group(['middleware' => ['auth']], function () {
     //Store
     Route::resource('store', StoreController::class);
 
+    //Service
+    Route::resource('service', ServiceController::class);
+
     // All Users
     Route::resource('all_users', AllUsersController::class);
     Route::get('approved_user/{id}', [AllUsersController::class, 'approvedUser'])->name('approved.user');
@@ -68,6 +72,8 @@ Route::get('Read-About/Hospital', [HomeController::class, 'hospitalDetail'])->na
 Route::get('Read-About/Stores', [HomeController::class, 'storeDetail'])->name('store-detail');
 Route::get('UNOs/SDGs/Rules', [HomeController::class, 'sdgsDetail'])->name('sdgs-detail');
 Route::get('Search/Roles', [HomeController::class, 'searchRole'])->name('search-role');
+Route::get('Organization', [HomeController::class, 'organization'])->name('organization');
+Route::get('Organization/Services/{id}', [HomeController::class, 'organizationServices'])->name('organization-services');
 Route::get('stores', [HomeController::class, 'stores'])->name('stores');
 Route::get('store/products/{id}', [HomeController::class, 'allProducts'])->name('allProducts');
 Route::get('about', [HomeController::class, 'about'])->name('about');

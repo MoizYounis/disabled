@@ -44,6 +44,7 @@
     </section>
     <section class="section section-xl">
         <div class="container">
+            <h3 class="text-center my-5"><b><a href="{{ route('organization') }}?name=School">See All Schools's</a></b></h3>
             <p class="mx-5">
                 There are 171 centers exclusively working at each tehsil/town level for the welfare of disabled children.
                 Special children confronted with any sort of visual impairment, mental incapacitation, hearing impairment
@@ -90,17 +91,17 @@
             <p>There are 7 degree colleges exclusively functioning for the welfare of disabled students.
                 Special children confronted with any sort of visual impairment, hearing impairment and physical disability
                 are admitted in these degree college.<br>
-                Facility of pick & drop is being provided free of cost to the needy students. 
+                Facility of pick & drop is being provided free of cost to the needy students.
             </p>
 
             <h4 class="mt-3"><b>Teachers Training College</b></h4>
             <p>Presently 2 teachers training colleges are providing professional training in the field of special education
                 and offering B.Ed. in Special Needs, M.Ed. in Visual Impairment, Teachers of Deaf. Speech & Languages
-               and M.A Special Education to the teachers. 
+               and M.A Special Education to the teachers.
             </p>
 
             <h4 class="mt-3"><b>In-Service Training College</b></h4>
-            <p>In-Service Training College is providing professional training and latest teaching techniques through teaching aid to the teachers. 
+            <p>In-Service Training College is providing professional training and latest teaching techniques through teaching aid to the teachers.
             </p>
 
         </div>

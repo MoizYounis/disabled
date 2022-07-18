@@ -80,4 +80,10 @@ class HomeController extends Controller
     public function sdgsDetail(){
         return view('sdgs-detail');
     }
+    public function organization() {
+        $role = request()->input('name');
+        $organizations = User::where('role', $role)->latest()->get();
+        $name = User::where('role', $role)->latest()->first();
+        return view('organization.organization', compact('organizations', 'name'));
+    }
 }
