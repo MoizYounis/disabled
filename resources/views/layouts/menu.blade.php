@@ -4,8 +4,9 @@
     </div>
     <div class="preloader">
         <div class="preloader-logo"><a class="brand" href="index.html"><img class="brand-logo-dark"
-                    src="assets/images/pwb-hub.png" alt="" width="245" height="50" /><img class="brand-logo-light"
-                    src="assets/images/pwb-hub.png" alt="" width="245" height="50" /></a>
+                    src="assets/images/pwb-hub.png" alt="" width="245" height="50" /><img
+                    class="brand-logo-light" src="assets/images/pwb-hub.png" alt="" width="245"
+                    height="50" /></a>
         </div>
         <div class="preloader-body">
             <div class="cssload-container">
@@ -34,7 +35,8 @@
                                     data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                                 <!-- RD Navbar Brand-->
                                 <div class="rd-navbar-brand"><a href="index.html"><img class="brand-logo-light"
-                                            src="assets/images/pwb-hub.png" alt="" width="207" height="51" /></a></div>
+                                            src="assets/images/pwb-hub.png" alt="" width="207"
+                                            height="51" /></a></div>
                             </div>
                             <div class="rd-navbar-main-element">
                                 <div class="rd-navbar-nav-wrap">
@@ -51,47 +53,64 @@
                                                 href="{{ route('blog') }}">Blogs</a>
                                         </li>
                                         <li class="rd-nav-item"><a class="rd-nav-link"
-                                                href="{{ route('sdgs-detail') }}" style="color: red">UNO's <br> SDG's Rules </a>
+                                                href="{{ route('sdgs-detail') }}" style="color: red">UNO's <br> SDG's
+                                                Rules </a>
                                         </li>
                                         <li class="rd-nav-item"><a class="rd-nav-link"
                                                 href="{{ route('contact') }}">Contact Us</a>
                                         </li>
                                         <li class="rd-nav-item">
-                                            <?php $roles = \App\Models\Role::where('name', '!=', \App\Utils\Constant::ADMIN)->get();?>
-                                            <select name="" id="" class="form-control form-select" style="background: transparent; color:white">
-                                                <option style="background: white; color:black" value="">Search</option>
-                                                @foreach ($roles as $role)
-                                                
-                                                <option style="background: white; color:black" value="{{ $role->name }}">{{ $role->name }}</option>
-                                                @endforeach
-                                            </select>
+                                            <div class="dropdown">
+                                                <button class="btn btn-secondary dropdown-toggle button-primary"
+                                                    style="background: transparent; color:white; " type="button"
+                                                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                                    aria-expanded="false">
+                                                    Search
+                                                </button>
+                                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                    <a class="dropdown-item hello"
+                                                        href="{{ route('ngo-detail') }}">NGO's
+                                                    </a>
+                                                    <a class="dropdown-item hello"
+                                                        href="{{ route('school-detail') }}">Schools
+                                                    </a>
+                                                    <a class="dropdown-item hello"
+                                                        href="{{ route('hospital-detail') }}">Hospitals
+                                                    </a>
+                                                    <a class="dropdown-item hello"
+                                                        href="{{ route('store-detail') }}">Stores
+                                                    </a>
+                                                </div>
+                                            </div>
                                         </li>
                                     </ul>
                                 </div>
                             </div>
-                                <div class="dropdown">
-                                    <a class="button button-primary button-sm" style="background-color: #c20909" href="#">Donate</a>
-                                    <button class="btn btn-secondary dropdown-toggle button-primary" type="button"
-                                        id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="false" style="background: transparent; color:red; ">
-                                        @if (Session::has('user_auth'))
+                            <div class="dropdown">
+                                <a class="button button-primary button-sm" style="background-color: #c20909"
+                                    href="#">Donate</a>
+                                <button class="btn btn-secondary dropdown-toggle button-primary" type="button"
+                                    id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+                                    aria-expanded="false" style="background: transparent; color:red; ">
+                                    @if (Session::has('user_auth'))
                                         {{ Session::get('user_auth')['name'] }}
-                                        @else
+                                    @else
                                         Login As
-                                        @endif
-                                    </button>
-                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                        @if (!Session::has('user_auth'))
+                                    @endif
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    @if (!Session::has('user_auth'))
                                         <a class="dropdown-item hello" href="{{ route('login') }}">
                                             <ul class="">
                                                 <li class="">Organization</li>
-                                                {{--  <li class="">Organization</li>  --}}
+                                                {{-- <li class="">Organization</li> --}}
                                             </ul>
                                         </a>
-                                        <a class="dropdown-item hello" href="{{ route('userLoginView') }}">User | Disabled</a>
+                                        <a class="dropdown-item hello" href="{{ route('userLoginView') }}">User |
+                                            Disabled</a>
                                         <a class="dropdown-item hello" href="{{ route('register') }}">Register</a>
-                                        @endif
-                                        @if (Session::has('user_auth'))
+                                    @endif
+                                    @if (Session::has('user_auth'))
                                         <a class="dropdown-item hello" href="{{ route('profile') }}">Profile</a>
                                         <a class="dropdown-item" href="{{ route('userLogout') }}">
                                             {{ __('Logout') }}
@@ -101,11 +120,11 @@
                                             class="d-none">
                                             @csrf
                                         </form>
-                                        @endif
-                                    </div>
+                                    @endif
                                 </div>
+                            </div>
+                        </div>
                     </div>
+                </nav>
             </div>
-            </nav>
-    </div>
-    </header>
+        </header>

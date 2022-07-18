@@ -42,6 +42,7 @@
     </section>
     <section class="section section-xl">
         <div class="container">
+            <h3 class="text-center my-5"><b><a href="{{ route('organization') }}?name=NGO">See All NGO's</a></b></h3>
             <h3>What is an NGO?</h3>
             <p><span style="font-weight: bold">NGO stands for non-governmental organization.</span>. While there is no
                 universally agreed-upon definition of an NGO, typically it is a voluntary group or institution with a social
