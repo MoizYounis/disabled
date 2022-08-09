@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
+use App\Models\Service;
 use App\Models\User;
 use App\Models\Store;
 use Illuminate\Http\Request;
@@ -85,5 +86,9 @@ class HomeController extends Controller
         $organizations = User::where('role', $role)->latest()->get();
         $name = User::where('role', $role)->latest()->first();
         return view('organization.organization', compact('organizations', 'name'));
+    }
+    public function organizationServices(Request $request) {
+        $services = Service::where('user_id', $request->id)->latest()->get();
+        return view('organization.service', compact('services'));
     }
 }

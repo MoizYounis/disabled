@@ -35,9 +35,9 @@
                                     data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                                 <!-- RD Navbar Brand-->
                                 <div class="rd-navbar-brand"><a href="index.html"><img class="brand-logo-light"
-                                            src="assets/images/pwb-hub.png" alt="" width="207"
+                                            src="assets/images/pwb-hub.png" alt="" width="150"
                                             height="51" /></a></div>
-                            </div>
+                                </div>
                             <div class="rd-navbar-main-element">
                                 <div class="rd-navbar-nav-wrap">
                                     <!-- RD Navbar Nav-->
@@ -53,7 +53,7 @@
                                                 href="{{ route('blog') }}">Blogs</a>
                                         </li>
                                         <li class="rd-nav-item"><a class="rd-nav-link"
-                                                href="{{ route('sdgs-detail') }}" style="color: red">UNO's <br> SDG's
+                                                href="{{ route('sdgs-detail') }}" >UNO's <br> SDG's
                                                 Rules </a>
                                         </li>
                                         <li class="rd-nav-item"><a class="rd-nav-link"
@@ -64,8 +64,7 @@
                                                 <button class="btn btn-secondary dropdown-toggle button-primary"
                                                     style="background: transparent; color:white; " type="button"
                                                     id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
-                                                    aria-expanded="false">
-                                                    Search
+                                                    aria-expanded="false">Search
                                                 </button>
                                                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                                     <a class="dropdown-item hello"

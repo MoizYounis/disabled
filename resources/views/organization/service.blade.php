@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-{{ $name->role }}
+Services
 @endsection
 @section('section')
     <!-- Swiper-->
@@ -23,7 +23,7 @@
                 <div class="row row-50 justify-content-lg-center align-items-lg-center">
                     <div class="col-lg-12">
                         <div class="bunner-content-modern text-center">
-                            <h1 class="main-bunner-title">{{ $name->role }}</h1>
+                            <h1 class="main-bunner-title">Services</h1>
                             {{-- <p>A hero is an ordinary individual who finds the strength to persevere and endure in spite of overwhelming obstacles.</p> --}}
                         </div>
                     </div>
@@ -33,35 +33,23 @@
     </section>
     <section class="section section-xl">
         <div class="container">
-            <table class="table table-striped" id="myTable">
+        <table class="table table-striped" id="myTable">
                 <thead>
                     <tr>
                         <th scope="col">Sr#</th>
                         <th scope="col">Name</th>
-                        @if(Auth::user())
-                        <th scope="col">Email</th>
-                        <th scope="col">Phone</th>
-                        @endif
-                        <th scope="col">City</th>
-                        <th scope="col">Provice</th>
-                        <th scope="col">Address</th>
+                        <th scope="col">Description</th>
                         <th scope="col">Actions</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($organizations as $key => $organization)
+                    @foreach ($services as $key => $service)
                         <tr>
                             <th scope="row">{{ $key + 1 }}</th>
-                            <th scope="row">{{ $organization->name ?? 'N/A' }}</th>
-                            @if(Auth::user())
-                            <th scope="row">{{ $organization->email ?? 'N/A' }}</th>
-                            <th scope="row">{{ $organization->phone ?? 'N/A' }}</th>
-                            @endif
-                            <th scope="row">{{ $organization->city ?? 'N/A' }}</th>
-                            <th scope="row">{{ $organization->provice->name ?? 'N/A' }}</th>
-                            <th scope="row">{{ $organization->address ?? 'N/A' }}</th>
+                            <th scope="row">{{ $service->name ?? 'N/A' }}</th>
+                            <th scope="row">{{ $service->description ?? 'N/A' }}</th>
                             <td>
-                                <a href="{{ route('service.show', $organization->id) }}" class="action-btn">
+                                <a href="{{ route('service.show', $service->id) }}" class="action-btn">
                                     {{--  <i class="fas fa-eye"></i>  --}}
                                     Services
                                 </a>

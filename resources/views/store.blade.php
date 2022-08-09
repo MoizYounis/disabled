@@ -38,7 +38,7 @@
                             </div>
                         </div>
                     @empty
-                        <h3 class="text-center">Stores Not Found</h3>
+                       
                     @endforelse
                 @endforeach
             </div>

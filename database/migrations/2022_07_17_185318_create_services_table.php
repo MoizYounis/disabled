@@ -17,7 +17,7 @@ class CreateServicesTable extends Migration
             $table->id();
             $table->bigInteger('user_id')->unsigned();
             $table->string('name');
-            $table->string('description');
+            $table->longText('description');
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users');
         });

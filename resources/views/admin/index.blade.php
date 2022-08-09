@@ -7,8 +7,8 @@
                 <div class="col-xl-4 col-md-6 col-12">
                     <div class="card card-congratulation-medal">
                         <div class="card-body">
-                            <h5>Welcome🎉 {{ $user->name }}!</h5>
-                            <p class="card-text font-small-3">Handle the Statistics of your Portal! </p>
+                        <h5>Welcome🎉 {{ $user->name }}!</h5>
+                            <p class="card-text font-small-3">Here is the statistics of your Portal! </p>
                             {{--  <h3 class="mb-75 mt-2 pt-50">
                                 <a href="#">$48.9k</a>
                             </h3>
@@ -26,7 +26,7 @@
                         <div class="card-header">
                             <h4 class="card-title">Statistics of Users</h4>
                             <div class="d-flex align-items-center">
-                                <p class="card-text font-small-2 me-25 mb-0">Updated 1 month ago</p>
+                                <p class="card-text font-small-2 me-25 mb-0">Updated 1 week ago</p>
                             </div>
                         </div>
                         <div class="card-body statistics-body">
@@ -99,7 +99,7 @@
                         <div class="card-header">
                             <h4 class="card-title">Statistics of Organizations and Stores</h4>
                             <div class="d-flex align-items-center">
-                                <p class="card-text font-small-2 me-25 mb-0">Updated 1 month ago</p>
+                                <p class="card-text font-small-2 me-25 mb-0">Updated 1 week ago</p>
                             </div>
                         </div>
                         <div class="card-body statistics-body">
@@ -112,7 +112,7 @@
                                             </div>
                                         </div>
                                         <div class="my-auto">
-                                            <h4 class="fw-bolder mb-0">{{ $total_users }}</h4>
+                                            <h4 class="fw-bolder mb-0">O</h4>
                                             <p class="card-text font-small-3 mb-0">NGO</p>
                                         </div>
                                     </div>

@@ -3,7 +3,7 @@
     <div class="container wow-outer">
       <div class="wow fadeIn">
         <div class="row row-50 row-lg-60">
-          <div class="col-12"><a href="index.html"><img src="assets/images/pwb-hub.png" alt="" width="207" height="51"/></a></div>
+          <!--  -->
           <div class="col-12">
             <ul class="footer-minimal-nav">
               <li><a href="{{ route('about') }}">About Us</a></li>

@@ -21,13 +21,13 @@
             </div>
         </div>
     </section>
-    <section class="section section-xl">
+    <section class="section section-lg">
         <div class="container">
             <div class="row row-50 justify-content-lg-between align-items-lg-center">
                 <div class="col-lg-6">
                     <div class="box-img-animate">
                         <div class="box-img-animate-item"
-                            data-parallax-scroll="{&quot;y&quot;: 0, &quot;x&quot;: 140,  &quot;smoothness&quot;: 50 }">
+                            data-parallax-scroll="{&quot;y&quot;: 0, &quot;x&quot;: 0,  &quot;smoothness&quot;: 0 }">
                             <img src="{{ asset('assets/images/audi-nissen-COmEXrbCtf4-unsplash (1).jpg') }}" alt="" >
                         </div>
                     </div>
@@ -39,7 +39,7 @@
                         <div class="row row-50">
                             <div class="col-md-6 col-lg-12">
                                 <div class="box-icon-modern">
-                                    <div class="box-icon-inner decorate-triangle"><span
+                                    <div class=""><span
                                             class="icon-xl linearicons-baby2 icon-primary"></span></div>
                                     <div class="box-icon-caption">
                                         <h4><a href="#">Aware People</a></h4>
@@ -49,7 +49,7 @@
                             </div>
                             <div class="col-md-6 col-lg-12">
                                 <div class="box-icon-modern">
-                                    <div class="box-icon-inner decorate-circle"><span
+                                    <div class=""><span
                                             class="icon-xl linearicons-sun icon-primary"></span></div>
                                     <div class="box-icon-caption">
                                         <h4><a href="#">Peace On The Planet</a></h4>
@@ -75,7 +75,7 @@
             </div>
         </div>
     </section>
-    <section class="section section-lg bg-gray-1">
+    <section class="section section-small bg-gray-1">
         <div class="container">
             <div class="row justify-content-center text-center">
                 <div class="col-md-9 col-lg-7 wow-outer">
