@@ -23,7 +23,11 @@ Services
                 <div class="row row-50 justify-content-lg-center align-items-lg-center">
                     <div class="col-lg-12">
                         <div class="bunner-content-modern text-center">
+<<<<<<< HEAD
                             <h1 class="main-bunner-title">Services</h1>
+=======
+                            <h1 class="main-bunner-title">Service</h1>
+>>>>>>> d0bcf8b4fe54579a86024a6f11a0926633a152b0
                             {{-- <p>A hero is an ordinary individual who finds the strength to persevere and endure in spite of overwhelming obstacles.</p> --}}
                         </div>
                     </div>

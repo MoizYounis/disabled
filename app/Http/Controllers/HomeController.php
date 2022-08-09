@@ -87,6 +87,10 @@ class HomeController extends Controller
         $name = User::where('role', $role)->latest()->first();
         return view('organization.organization', compact('organizations', 'name'));
     }
+<<<<<<< HEAD
+=======
+
+>>>>>>> d0bcf8b4fe54579a86024a6f11a0926633a152b0
     public function organizationServices(Request $request) {
         $services = Service::where('user_id', $request->id)->latest()->get();
         return view('organization.service', compact('services'));
