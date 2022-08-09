@@ -30,8 +30,11 @@
     {!! Form::text('city', $user->city, ['class' => 'form-control', 'readonly']) !!}
 </div>
 
-<div class="mb-1 col-sm-6">
-    {!! Form::label('role', 'Role:') !!}
-    {!! Form::text('role', $user->role, ['class' => 'form-control', 'readonly']) !!}
+<div class="mb-1 col-sm-12">
+    <img src="{{ asset('storage/'.$user->file) }}" alt="No Image Found">
+</div>
+<div class="mb-1 col-sm-12">
+    {{ $user->file }}
+    <embed src="{{ asset('storage/'.$user->file) }}" alt="No Image Found" style="width:600px; height:800px;" frameborder="0">
 </div>
 

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Blog;
 use Laracasts\Flash\Flash;
 use Illuminate\Http\Request;
+use App\Utils\Constant;
 
 class BlogController extends Controller
 {
@@ -16,7 +17,12 @@ class BlogController extends Controller
      */
     public function index()
     {
-        $blogs = Blog::all();
+        $user = auth()->user();
+        if($user->role == Constant::ADMIN) {
+            $blogs = Blog::with('user')->latest()->get();
+        } else {
+            $blogs = Blog::with('user')->where('user_id', $user->id)->latest()->get();
+        }
         return view('blogs.index', compact('blogs'));
     }
 

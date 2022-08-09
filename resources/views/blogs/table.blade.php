@@ -2,6 +2,7 @@
     <thead>
       <tr>
         <th scope="col">Sr#</th>
+        <th scope="col">Writen By</th>
         <th scope="col">Blogs</th>
         <th scope="col">Actions</th>
       </tr>
@@ -10,6 +11,7 @@
         @foreach ($blogs as $key => $blog)
         <tr>
             <th scope="row">{{$key + 1}}</th>
+            <th scope="row">{{$blog->user->name}}</th>
             <td>{{ $blog->blog }}</td>
             <td>
                 {{--  <a href="{{route('blogs.show', $blog->id)}}" class="action-btn">

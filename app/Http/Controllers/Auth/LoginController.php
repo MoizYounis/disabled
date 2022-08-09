@@ -8,6 +8,8 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use App\Models\User;
+use App\Utils\Constant;
 
 class LoginController extends Controller
 {
@@ -89,9 +91,7 @@ class LoginController extends Controller
      */
     protected function authenticated(Request $request, $user)
     {
-        if ($user->is_approved == 0) {
-            dd('User is not approved');
-        }
+
     }
 
      /**
@@ -104,6 +104,13 @@ class LoginController extends Controller
      */
     public function login(Request $request)
     {
+        $user = User::where('email', $request->email)->first();
+        if ($user->is_approved == 0) {
+            return redirect()->back()->with('error', 'You are not Approved, Please wait for verification!');
+        }
+        if ($user->role == Constant::USER || $user->role == Constant::DISABLED) {
+            return redirect()->back()->with('error', 'You Are Not An Organization, Please Register As A Organization');
+        }
         $this->validateLogin($request);
 
         // If the class is using the ThrottlesLogins trait, we can automatically throttle

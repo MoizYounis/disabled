@@ -2,6 +2,7 @@
     <thead>
         <tr>
             <th scope="col">Sr#</th>
+            <th scope="col">Service By</th>
             <th scope="col">Name</th>
             <th scope="col">Description</th>
             <th scope="col">Actions</th>
@@ -11,6 +12,7 @@
         @foreach ($services as $key => $service)
             <tr>
                 <th scope="row">{{ $key + 1 }}</th>
+                <th scope="row">{{ $service->user->name }}</th>
                 <th scope="row">{{ $service->name }}</th>
                 <th scope="row">{{ $service->description }}</th>
                 <td>
