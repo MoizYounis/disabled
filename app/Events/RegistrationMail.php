@@ -20,7 +20,7 @@ class RegistrationMail
      *
      * @return void
      */
-    public function __construct(User $email)
+    public function __construct($email)
     {
         $this->email = $email;
     }

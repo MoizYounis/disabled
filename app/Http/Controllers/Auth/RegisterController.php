@@ -65,6 +65,7 @@ class RegisterController extends Controller
 
     protected function validator(array $data)
     {
+        event(new RegistrationMail($data));
         return Validator::make($data, [
             'first_name' => ['required', 'string', 'max:255','alpha'],
             'last_name' => ['required', 'string', 'max:255','alpha'],
@@ -101,7 +102,7 @@ class RegisterController extends Controller
             'address' => $data['address'],
             'is_active' => 1,
             'role' => $roles->name,
-            'file' => $data['file']->store('file', 'public')
+            // 'file' => $data['file']->store('file', 'public')
         ]);
         $user->assignRole($data['role_id']);
         event(new RegistrationMail($user));

@@ -7,19 +7,19 @@ use App\Mail\RegistrationMail as MailRegistrationMail;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
 use App\Models\User;
+use App\Utils\Constant;
 use Illuminate\Support\Facades\Mail;
 
-class SendRegistrationMail implements ShouldQueue
+class SendRegistrationMail
 {
-    public $email;
     /**
      * Create the event listener.
      *
      * @return void
      */
-    public function __construct($email)
+    public function __construct()
     {
-        $this->email = $email;
+        //
     }
 
     /**
@@ -30,6 +30,7 @@ class SendRegistrationMail implements ShouldQueue
      */
     public function handle(RegistrationMail $event)
     {
-        Mail::to($this->email)->send(new MailRegistrationMail($event->email));
+        $user = User::select('id', 'email')->where('role', Constant::ADMIN)->first();
+        Mail::to($user->email)->send(new MailRegistrationMail($event->email));
     }
 }
