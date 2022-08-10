@@ -8,6 +8,7 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Laracasts\Flash\Flash;
 
 class LoginController extends Controller
 {
@@ -89,9 +90,7 @@ class LoginController extends Controller
      */
     protected function authenticated(Request $request, $user)
     {
-        if ($user->is_approved == 0) {
-            dd('User is not approved');
-        }
+        //
     }
 
      /**
