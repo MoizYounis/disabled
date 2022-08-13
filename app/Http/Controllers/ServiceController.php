@@ -6,6 +6,7 @@ use App\Models\Service;
 use Laracasts\Flash\Flash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use App\Utils\Constant;
 
 class ServiceController extends Controller
 {
@@ -17,7 +18,12 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        $services = Service::where('user_id', auth()->user()->id)->latest()->get();
+        $user = auth()->user();
+        if ($user->role == Constant::ADMIN) {
+            $services = Service::with('user')->latest()->get();
+        } else {
+            $services = Service::with('user')->where('user_id', $user->id)->latest()->get();
+        }
         return view('service.index', compact('services'));
     }
 

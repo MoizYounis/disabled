@@ -36,7 +36,8 @@ class User extends Authenticatable
         'province_id',
         'role',
         'is_new',
-        'is_approved'
+        'is_approved',
+        'file'
     ];
 
     /**

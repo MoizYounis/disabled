@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-    SDG's Rules
+    SDG Rules
 @endsection
 @section('section')
     <!-- Swiper-->
@@ -23,7 +23,7 @@
                 <div class="row row-50 justify-content-lg-center align-items-lg-center">
                     <div class="col-lg-12">
                         <div class="bunner-content-modern text-center">
-                            <h1 class="main-bunner-title">Read About UNO's SDG's Rules</h1>
+                            <h1 class="main-bunner-title">UNO's SDG Rules</h1>
                             {{-- <p>A hero is an ordinary individual who finds the strength to persevere and endure in spite of overwhelming obstacles.</p> --}}
                         </div>
                     </div>
@@ -33,7 +33,7 @@
     </section>
     <section class="section section-xl">
         <div class="container">
-            <h1 class="text-center">DISABILITY</h1>
+           
             <p>
                 The 2030 Agenda for Sustainable Development and its 17 SDGs provide a powerful framework to guide local
                 communities, countries and the international community toward the achievement of disability-inclusive
@@ -43,6 +43,7 @@
                 WHO’s International Classification of Functioning, Disability and Health. provides the scientific basis for
                 this model of disability.
             </p>
+            <h4 class="text-left-align">DISABILITY</h4>
             <p>
                 Disability is a matter of degree, because mental and physical impairments range in severity, from minor to
                 severe. The experience of disability over the life-course is a universal human experience since everyone

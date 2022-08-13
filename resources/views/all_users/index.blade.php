@@ -13,6 +13,7 @@
     <div class="section-body">
        <div class="card">
             <div class="card-body">
+                @include('flash-message')
                 @include('all_users.table')
             </div>
        </div>

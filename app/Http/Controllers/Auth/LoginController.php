@@ -8,7 +8,6 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Validation\ValidationException;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
-use Laracasts\Flash\Flash;
 
 class LoginController extends Controller
 {

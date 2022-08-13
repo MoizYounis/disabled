@@ -44,7 +44,7 @@
     </section>
     <section class="section section-xl">
         <div class="container">
-            <h3 class="text-center my-5"><b><a href="{{ route('organization') }}?name=School">See All Schools's</a></b></h3>
+            
             <p class="mx-5">
                 There are 171 centers exclusively working at each tehsil/town level for the welfare of disabled children.
                 Special children confronted with any sort of visual impairment, mental incapacitation, hearing impairment
@@ -103,7 +103,9 @@
             <h4 class="mt-3"><b>In-Service Training College</b></h4>
             <p>In-Service Training College is providing professional training and latest teaching techniques through teaching aid to the teachers.
             </p>
-
+            <h4 class="text-center my-5"><b><a href="{{ route('contact') }}">Contact Us</a></b></h3>
+            <h3 class="text-center my-5"><b><a href="{{ route('organization') }}?name=School">See All Schools's</a></b></h3>
         </div>
     </section>
+   
 @endsection

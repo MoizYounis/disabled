@@ -7,7 +7,7 @@ class Constant
     const ADMIN = "ADMIN";
     const STORE = "STORE";
     const FIRM = "FIRM";
-    const DISABLED = "DISABLED";
+    const DISABLED = "Disabled User";
     const HOSPITAL = "Hospital";
     const SCHOOL = "School";
     const NGO = "NGO";

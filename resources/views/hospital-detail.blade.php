@@ -33,7 +33,7 @@
     </section>
     <section class="section section-xl">
         <div class="container">
-            <h3 class="text-center my-5"><b><a href="{{ route('organization') }}?name=Hospital">See All Hospitals's</a></b></h3>
+            
             <h4><b><u>PSRD (Pakistan Society for the Rehabilitation of the Disabled) Hospital</u></b></h4>
             <p class="ml-5">
                 PSRD (Pakistan Society for the Rehabilitation of the Disabled) Hospital is a state-of-the-art PMC verified
@@ -74,6 +74,8 @@
                     <li class="my-3">⦁ Medical treatment by using local resources</li>
                 </ul>
             </p>
+            <h4 class="text-center my-5"><b><a href="{{ route('contact') }}">Contact Us</a></b></h3>
+            <h3 class="text-center my-5"><b><a href="{{ route('organization') }}?name=Hospital">See All Hospitals's</a></b></h3>
         </div>
     </section>
 @endsection

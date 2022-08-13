@@ -6,6 +6,7 @@ use App\Models\Store;
 use Laracasts\Flash\Flash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
+use App\Utils\Constant;
 
 class StoreController extends Controller
 {
@@ -17,7 +18,12 @@ class StoreController extends Controller
      */
     public function index()
     {
-        $stores = Store::where('user_id', auth()->user()->id)->latest()->get();
+        $user = auth()->user();
+        if ($user->role == Constant::ADMIN) {
+            $stores = Store::with('store')->latest()->get();
+        } else {
+            $stores = Store::with('store')->where('user_id', $user->id)->latest()->get();
+        }
         return view('store.index', compact('stores'));
     }
 

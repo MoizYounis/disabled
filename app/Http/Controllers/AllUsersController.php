@@ -136,10 +136,7 @@ class AllUsersController extends Controller
         }
 
         $user->delete();
-
-        Flash::success('user deleted successfully.');
-
-        return redirect(route('all_users.index'));
+        return redirect()->route('all_users.index')->with('success', 'User Deleted Successfully!');
     }
 
     public function approvedUser($id)
@@ -148,14 +145,14 @@ class AllUsersController extends Controller
         $user->is_approved = 1;
         $user->is_new = 0;
         $user->update();
-        return redirect()->back();
+        return redirect()->route('all_users.index')->with('success', 'User Approved Successfully!');
     }
 
-    public function rejectUser($id)
+    public function rejectUser(Request $request)
     {
-        $user = User::find($id);
-        $user->is_approved = 0;
+        $user = User::find($request->id);
+        $user->is_approved = 2;
         $user->update();
-        return redirect()->back();
+        return redirect()->route('all_users.index')->with('success', 'User Rejected Successfully!');
     }
 }

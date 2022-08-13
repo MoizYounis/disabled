@@ -2,7 +2,8 @@
     <thead>
       <tr>
         <th scope="col">Sr#</th>
-        <th scope="col">Name</th>
+        <th scope="col">Store Name</th>
+        <th scope="col">Product Name</th>
         <th scope="col">Image</th>
         <th scope="col">Description</th>
         <th scope="col">Actions</th>
@@ -12,6 +13,7 @@
         @foreach ($stores as $key => $store)
         <tr>
             <th scope="row">{{$key + 1}}</th>
+            <td>{{ $store->store->name }}</td>
             <td>{{ $store->name }}</td>
             <td><img src="{{ asset('storage/'.$store->image) }}" width="20%" class="img-fluid" alt="{{$store->name}} Image"></td>
             <td>{{ $store->description }}</td>

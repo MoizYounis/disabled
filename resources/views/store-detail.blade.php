@@ -46,6 +46,7 @@
                 <li class="my-3">⦁ Adaptive switches and utensils to allow those with limited motor skills to eat, play games, and accomplish other activities.</li>
                 <li class="my-3">⦁ Devices and features of devices to help perform tasks such as cooking, dressing, and grooming; specialized handles and grips, devices that extend reach, and lights on telephones and doorbells are a few examples. </li>
             </ul>
+            <h4 class="text-center my-5"><b><a href="{{ route('contact') }}">Contact Us</a></b></h3>
             <h3 class="text-center my-4"><b><a href="{{ route('stores') }}">See All Stores</a></b></h3>
         </div>
     </section>

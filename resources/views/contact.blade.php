@@ -8,10 +8,10 @@ Contact
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12 col-lg-9">
-                        <h2 class="breadcrumbs-custom-title">Contacts</h2>
+                        <h2 class="breadcrumbs-custom-title">Contact Us</h2>
                         <ul class="breadcrumbs-custom-path">
                             <li><a href="index.html">Home</a></li>
-                            <li class="active">Contacts</li>
+                            <li class="active">Contact Us</li>
                         </ul>
                     </div>
                 </div>
