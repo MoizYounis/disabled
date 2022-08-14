@@ -168,6 +168,7 @@
                                         <option value="2" style="color: #999">-- NGO --</option>
                                         <option value="3" style="color: #999">-- School --</option>
                                         <option value="4" style="color: #999">-- Hospital --</option>
+                                        <option value="7" style="color: #999">-- Store --</option>
                                         <option value="5" style="color: #999">-- Disabled User --</option>
                                         <option value="6" style="color: #999">-- User --</option>
                                     </select>

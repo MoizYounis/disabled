@@ -5,7 +5,7 @@ namespace App\Utils;
 class Constant
 {
     const ADMIN = "ADMIN";
-    const STORE = "STORE";
+    const STORE = "Store";
     const FIRM = "FIRM";
     const DISABLED = "Disabled User";
     const HOSPITAL = "Hospital";
