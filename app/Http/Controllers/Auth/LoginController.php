@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Auth;
 
+use App\Models\User;
+use App\Utils\Constant;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
@@ -102,6 +104,16 @@ class LoginController extends Controller
      */
     public function login(Request $request)
     {
+        $user = User::where('email', $request->email)->first();
+        if(empty($user)) {
+            return redirect()->back()->with('error', 'Invalid User, Please Enter Valid Email!');
+        }
+        if ($user->is_approved == 0) {
+            return redirect()->back()->with('error', 'You are not Approved, Please wait for verification!');
+        }
+        if ($user->role == Constant::USER || $user->role == Constant::DISABLED) {
+            return redirect()->back()->with('error', 'You Are Not An Organization, Please Register As An Organization');
+        }
         $this->validateLogin($request);
 
         // If the class is using the ThrottlesLogins trait, we can automatically throttle

@@ -45,7 +45,9 @@
 
                             <div class="form__main__fields">
                                 <div class="group">
-                                    <input type="text" id="first_name" name="first_name" autofocus >
+
+                                    {!! Form::text('first_name', null, ['id' => 'first_name', 'autofocus']) !!}
+                                    {{--  <input type="text" id="first_name" name="first_name" autofocus >  --}}
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
                                     <label for="first_name">First Name</label>
@@ -59,7 +61,8 @@
 
                             <div class="form__main__fields">
                                 <div class="group">
-                                    <input type="text" name="last_name" id="last_name" value="" autofocus >
+                                    {!! Form::text('last_name', null, ['id' => 'last_name', 'autofocus']) !!}
+                                    {{--  <input type="text" name="last_name" id="last_name" value="" autofocus >  --}}
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
                                     <label for="last_name">Last Name</label>
@@ -73,7 +76,9 @@
 
                             <div class="form__main__fields">
                                 <div class="group">
-                                    <input type="email" value="" id="email" class="@error('email') is-invalid @enderror" name="email" value="{{ old('email') }}"  autocomplete="email" autofocus>
+                                    {!! Form::email('email', null, ['id' => 'email', 'autofocus', 'autocomplete' => 'email']) !!}
+
+                                    {{--  <input type="email" value="" id="email" class="@error('email') is-invalid @enderror" name="email" value="{{ old('email') }}"  autocomplete="email" autofocus>  --}}
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
                                     <label for="email">Email</label>
@@ -87,7 +92,8 @@
 
                             <div class="form__main__fields">
                                 <div class="group">
-                                    <input type="number" id="phone" value="" id="phone" name="phone" autofocus >
+                                    {!! Form::number('phone', null, ['id' => 'phone', 'autofocus']) !!}
+                                    {{--  <input type="number" id="phone" value="" id="phone" name="phone" autofocus >  --}}
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
                                     <label for="phone">Phone</label>
@@ -97,7 +103,6 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                                <input type="hidden" value="11" name="phone_digits">
                             </div>
 
                             <?php
@@ -124,7 +129,8 @@
 
                             <div class="form__main__fields">
                                 <div class="group">
-                                    <input type="text" name="city" value="" id="city" autofocus >
+                                    {!! Form::text('city', null, ['id' => 'city', 'autofocus']) !!}
+                                    {{--  <input type="text" name="city" value="" id="city" autofocus >  --}}
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
                                     <label for="city">City*</label>
@@ -138,7 +144,8 @@
 
                             <div class="form__main__fields">
                                 <div class="group">
-                                    <input type="text" name="address" id="address" value="" autofocus >
+                                    {!! Form::text('address', null, ['id' => 'address', 'autofocus']) !!}
+                                    {{--  <input type="text" name="address" id="address" value="" autofocus >  --}}
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
                                     <label for="address">Address</label>
@@ -190,7 +197,10 @@
 
                             <div class="form__main__fields">
                                 <div class="group">
-                                    <input type="password" name="password" id="password" value="" autofocus autocomplete="new-password" >
+                                    {!! Form::password('password', null, ['id' => 'password', 'autofocus', "autocomplete" => "new-password"]) !!}
+
+                                    {{--  <input type="password" name="password" id="password" value="" autofocus autocomplete="new-password" >  --}}
+
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
                                     <label for="password">{{ __('Password') }}</label>
@@ -204,8 +214,9 @@
 
                             <div class="form__main__fields">
                                 <div class="group">
-                                    <input id="password-confirm" type="password" name="password_confirmation"
-                                        autocomplete="new-password">
+                                    {!! Form::password('password_confirmation', null, ['id' => 'password-confirm', 'autofocus', "autocomplete" => "new-password"]) !!}
+                                    {{--  <input id="password-confirm" type="password" name="password_confirmation"
+                                        autocomplete="new-password">  --}}
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
                                     <label for="password-confirm">{{ __('Confirm Password') }}</label>

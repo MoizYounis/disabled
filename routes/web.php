@@ -1,19 +1,20 @@
 <?php
 
-use App\Http\Controllers\Admin\AdminAuthController;
-use App\Http\Controllers\AdminController;
-use App\Http\Controllers\AllUsersController;
-use App\Http\Controllers\Auth\RegisterController;
-use App\Http\Controllers\BlogController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
+use App\Http\Controllers\BlogController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RoleController;
-use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\StoreController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\AllUsersController;
 use App\Http\Controllers\UserLoginController;
-use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\NotificationController;
+use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Admin\AdminAuthController;
 
 /*
 |--------------------------------------------------------------------------
@@ -44,6 +45,9 @@ Route::group(['middleware' => ['auth']], function () {
 
     //Blog
     Route::resource('blogs', BlogController::class);
+
+    //Notifications
+    Route::resource('notifications', NotificationController::class);
 
     //Store
     Route::resource('store', StoreController::class);
@@ -78,6 +82,7 @@ Route::get('stores', [HomeController::class, 'stores'])->name('stores');
 Route::get('store/products/{id}', [HomeController::class, 'allProducts'])->name('allProducts');
 Route::get('about', [HomeController::class, 'about'])->name('about');
 Route::get('contact', [HomeController::class, 'contact'])->name('contact');
+Route::post('contact-us', [HomeController::class, 'contactUs'])->name('contact-us');
 Route::get('profile', [ProfileController::class, 'index'])->name('profile');
 Route::get('/user_logout',[UserLoginController::class,'userLogout'])->name('userLogout');
 Route::get('user/product-request/{id}', [StoreController::class, 'productRequest'])->name('product-request');

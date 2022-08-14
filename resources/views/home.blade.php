@@ -15,6 +15,7 @@
                         <div class="bunner-content-modern text-center">
                             <h1 class="main-bunner-title">Help The Persons With Disabilities</h1>
                             <p>A hero is an ordinary individual who finds the strength to persevere and endure in spite of overwhelming obstacles.</p>
+                            @include('flash-message')
                         </div>
                     </div>
                 </div>

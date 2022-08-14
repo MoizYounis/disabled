@@ -56,13 +56,13 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'first_name' => ['required', 'string', 'max:255','alpha'],
+            'first_name' => ['required', 'string', 'max:255','regex:/(^[A-Za-z? ,_-])/'],
             'last_name' => ['required', 'string', 'max:255','alpha'],
             'city' => ['required', 'string', 'max:255','regex:/(^[A-Za-z? ,_-])|(^[a-bA-B0-9? ,_-])+$/'],
             'address' => ['required', 'string', 'max:255','regex:/(^[A-Za-z? ,_-])|(^[a-bA-B0-9? ,_-])+$/'],
             'province' => ['required'],
             'role_id' => ['required'],
-            'phone' => ['required','numeric'],
+            'phone' => ['required','string', 'phone_number' , 'size:11'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:6', 'confirmed']
         ]);
@@ -74,20 +74,18 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\Models\User
      */
-    protected function create(array $data)
+    public function create(array $data)
     {
         $roles = Role::where('id', $data['role_id'])->first();
-        if ($data['phone_digits'] != 11) {
-            return redirect()->back()->with('error', 'Phone Number Should Be Equal To 11 Digits');
-        }
-        if (($roles->name ?? "") != Constant::DISABLED || ($roles->name ?? "") != Constant::USER) {
-            if(empty($data['file'])) {
-                return redirect()->back()->with('error', 'Please Upload Required Document!');
-            }
-        } else {
-            dd("Ni yar");
+
+        if ($roles->name != Constant::USER && empty($data['file'])) {
+           return back()->with('error', 'Try Again and Go To Register Page and, Please Upload Required Document of Your Organization or Your Disability!');
         }
 
+        $image = null;
+        if (!empty($data['file'])) {
+            $image = $data['file']->store('file', 'public');
+        }
             $user = User::create([
             'name' => $data['first_name'] . ' ' . $data['last_name'],
             'email' => $data['email'],
@@ -98,10 +96,12 @@ class RegisterController extends Controller
             'address' => $data['address'],
             'is_active' => 1,
             'role' => $roles->name,
-            'file' => $data['file']->store('file', 'public') ?? null
+            'file' => $image
         ]);
         $user->assignRole($data['role_id']);
-        event(new RegistrationMail($user));
-        return $user;
+        $mailData = ['name' => $user->name, 'email' => $user->email, 'role' => $user->role];
+        event(new RegistrationMail($mailData));
+        return back()->with('success', 'Your Information has been saved successfully. Please Wait for registration Verification');
+        // return $user;
     }
 }

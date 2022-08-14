@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Blog;
-use App\Models\Service;
 use App\Models\User;
 use App\Models\Store;
-use Illuminate\Http\Request;
+use App\Models\Contact;
+use App\Models\Service;
 use Laracasts\Flash\Flash;
+use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -45,6 +46,22 @@ class HomeController extends Controller
     public function contact()
     {
         return view('contact');
+    }
+    public function contactUs(Request $request) {
+        $request->validate([
+            'name' => 'required',
+            'phone' => 'required',
+            'email' => 'required',
+            'message' => 'required'
+        ]);
+
+        Contact::create([
+            'name' => $request->name,
+            'phone' => $request->phone,
+            'email' => $request->email,
+            'message' => $request->message
+        ]);
+        return back()->with('success', 'Thanks For Contact Us, We Will Contact You Soon!');
     }
     public function stores()
     {

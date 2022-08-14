@@ -66,3 +66,24 @@
 
 @endif  --}}
 
+@push('scripts')
+    <script>
+        $(document).ready(function() {
+            toastr.options = {
+                "debug": false,
+                "positionClass": "toast-bottom-full-width",
+                "onclick": null,
+                "fadeIn": 300,
+                "fadeOut": 1000,
+                "timeOut": 9000,
+                "extendedTimeOut": 1000
+              }
+            @if (Session::has('error'))
+                toastr.error('{{ Session::get('error') }}');
+            @elseif(Session::has('success'))
+                toastr.success('{{ Session::get('success') }}');
+            @endif
+        });
+    </script>
+@endpush
+

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
 use App\Models\Notification;
 use App\Models\User;
 use App\Models\Store;
@@ -29,7 +30,8 @@ class AdminController extends Controller
         $pending_users = User::where('is_approved', 0)->count();
         $new_users = User::where('is_new', 1)->count();
         $notifications = Notification::all();
+        $contacts = Contact::orderBy('id', 'DESC')->get();
 
-        return view('admin.index', compact('user', 'total_users', 'approved_users', 'pending_users', 'new_users', 'notifications','total_users' ,'ngos', 'hospitals', 'schools', 'stores_unq'));
+        return view('admin.index', compact('user', 'total_users', 'approved_users', 'pending_users', 'new_users', 'notifications','total_users' ,'ngos', 'hospitals', 'schools', 'stores_unq', 'contacts'));
     }
 }

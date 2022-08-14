@@ -23,7 +23,7 @@
 
     <li class="nav-item">
         <a class="d-flex align-items-center {{ Route::is('service*') ? 'active' : '' }}" href="{{ route('service.index') }}">
-            <i data-feather="package"></i>
+            <i data-feather="book-open"></i>
             <span class="menu-title text-truncate" data-i18n="Services">Services
             </span>
         </a>
@@ -43,4 +43,13 @@
         </a>
     </li>
     @endcan
+
+    @if(auth()->user()->role == \App\Helpers\Constant::ADMIN)
+    <li class=" nav-item">
+        <a class="d-flex align-items-center {{ Route::is('notifications.index*') ? 'active' : '' }}" href="{{ route('notifications.index') }}">
+            <i data-feather="bell"></i>
+            <span class="menu-title text-truncate" data-i18n="Notifications">Notifications</span>
+        </a>
+    </li>
+    @endif
 </ul>

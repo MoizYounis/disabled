@@ -60,8 +60,13 @@ Contact
                 <div class="col-md-9 col-lg-7">
                     <h3>Get in Touch</h3>
                     <!-- RD Mailform-->
-                    <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact"
-                        method="post" action="bat/rd-mailform.php">
+                    @include('flash-message')
+                    <form
+                    {{--  class="rd-form rd-mailform"   --}}
+                    {{--  data-form-output="form-output-global"   --}}
+                    {{--  data-form-type="contact"  --}}
+                        method="post" action="{{ route('contact-us') }}">
+                        @csrf
                         <div class="form-wrap">
                             <input class="form-input" id="contact-name" type="text" name="name"
                                 data-constraints="@Required">
@@ -93,3 +98,4 @@ Contact
         </div>
     </section>
 @endsection
+

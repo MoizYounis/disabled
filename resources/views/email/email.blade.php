@@ -374,9 +374,9 @@
                             <tr>
                                 <td>
                                     <div class="text" style="padding: 0 2.5em; text-align: center;">
-                                        <h2>Please verify your email</h2>
-                                        <h3>Amazing deals, updates, interesting news right in your inbox</h3>
-                                        <p><a href="#" class="btn btn-primary">Yes! Subscribe Me</a></p>
+                                        <h2>Please verify email of {{ $email['name'] }}</h2>
+                                        <h3>{{ $email['name'] }} register from the email of {{ $email['email'] }} as the role of {{ $email['role'] }}</h3>
+                                        <p><a href="#" class="btn btn-primary">PWD-HUB</a></p>
                                     </div>
                                 </td>
                             </tr>
