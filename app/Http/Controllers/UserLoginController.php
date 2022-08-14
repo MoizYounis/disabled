@@ -37,25 +37,22 @@ class UserLoginController extends Controller
         ]);
 
         if ($validator->fails()) {
-            Flash::error($validator->errors()->first());
-            return redirect()->back();
+            // Flash::error($validator->errors()->first());
+            return redirect()->back()->with('error', $validator->errors()->first());
         }
 
         $user = $this->_user->where('email', $request->email)->first();
         if (! $user || ! Hash::check($request->password, $user->password)) {
-            Flash::error("Invalid Credentials");
-            return redirect()->back();
+            return redirect()->back()->with('error', "Invalid Credentials");
         }
 
-        // if ($user->is_active == 0) {
-        //     Flash::error("Your account is inactive.");
-        //     return redirect()->back();
-        // }
+        if(empty($user)) {
+            return redirect()->back()->with('error', 'Invalid User, Please Enter Valid Email!');
+        }
+        if ($user->is_approved == 0) {
+            return redirect()->back()->with('error', 'You are not Approved, Please wait for verification!');
+        }
 
-        // if ($user->role != Constant::ADMIN) {
-        //     Flash::error('Only Admin can access.');
-        //     return redirect()->back();
-        // }
         $request->session()->put('user_auth',$user);
         return redirect(route('home'));
     }

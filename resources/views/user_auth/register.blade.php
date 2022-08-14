@@ -26,16 +26,28 @@
 
                 <h3 class="first-heading">Enter</h3>
                 <h5 class="second-heading">Registration Details</h5>
-
-                <form method="POST" action="{{ route('register') }}">
+                <form method="POST" action="{{ route('register')}}" enctype="multipart/form-data">
                     @csrf
+
+                    @if ($errors->any())
+                            <div class="alert alert-danger p-0" style="color: red;">
+                                <ul>
+                                    @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                    @endforeach
+                                </ul>
+                            </div>
+                        @endif
+                @include('flash-message')
 
                     <div class="form">
                         <div class="form__main">
 
                             <div class="form__main__fields">
                                 <div class="group">
-                                    <input type="text" id="first_name" name="first_name" autofocus required>
+
+                                    {!! Form::text('first_name', null, ['id' => 'first_name', 'autofocus']) !!}
+                                    {{--  <input type="text" id="first_name" name="first_name" autofocus >  --}}
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
                                     <label for="first_name">First Name</label>
@@ -49,7 +61,8 @@
 
                             <div class="form__main__fields">
                                 <div class="group">
-                                    <input type="text" name="last_name" id="last_name" value="" autofocus required>
+                                    {!! Form::text('last_name', null, ['id' => 'last_name', 'autofocus']) !!}
+                                    {{--  <input type="text" name="last_name" id="last_name" value="" autofocus >  --}}
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
                                     <label for="last_name">Last Name</label>
@@ -63,7 +76,9 @@
 
                             <div class="form__main__fields">
                                 <div class="group">
-                                    <input type="email" value="" id="email" class="@error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                                    {!! Form::email('email', null, ['id' => 'email', 'autofocus', 'autocomplete' => 'email']) !!}
+
+                                    {{--  <input type="email" value="" id="email" class="@error('email') is-invalid @enderror" name="email" value="{{ old('email') }}"  autocomplete="email" autofocus>  --}}
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
                                     <label for="email">Email</label>
@@ -77,7 +92,8 @@
 
                             <div class="form__main__fields">
                                 <div class="group">
-                                    <input type="text" id="phone" value="" id="phone" name="phone" autofocus required>
+                                    {!! Form::number('phone', null, ['id' => 'phone', 'autofocus']) !!}
+                                    {{--  <input type="number" id="phone" value="" id="phone" name="phone" autofocus >  --}}
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
                                     <label for="phone">Phone</label>
@@ -95,7 +111,7 @@
 
                             <div class="form__main__fields">
                                 <div class="group">
-                                    <select name="province" id="" required style="margin-top: 2px; color: #000;">
+                                    <select name="province" id=""  style="margin-top: 2px; color: #000;">
                                         <option value="" selected style="color: #999;">-- Select Province --</option>
                                         @foreach ($provinces as $item)
                                         <option value="{{ $item->id }}" style="color: #5D4037;">{{ $item->name }}</option>
@@ -113,7 +129,8 @@
 
                             <div class="form__main__fields">
                                 <div class="group">
-                                    <input type="text" name="city" value="" id="city" autofocus required>
+                                    {!! Form::text('city', null, ['id' => 'city', 'autofocus']) !!}
+                                    {{--  <input type="text" name="city" value="" id="city" autofocus >  --}}
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
                                     <label for="city">City*</label>
@@ -127,7 +144,8 @@
 
                             <div class="form__main__fields">
                                 <div class="group">
-                                    <input type="text" name="address" id="address" value="" autofocus required>
+                                    {!! Form::text('address', null, ['id' => 'address', 'autofocus']) !!}
+                                    {{--  <input type="text" name="address" id="address" value="" autofocus >  --}}
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
                                     <label for="address">Address</label>
@@ -145,11 +163,10 @@
 
                             <div class="form__main__fields">
                                 <div class="group">
-                                    <select name="role_id" id="role_id" required style="margin-top: 2px; color: #000;">
-                                        <option value="" selected style="color: #999">-- Registered As --</option>
-                                        @foreach ($roles as $item)
-                                        <option value="{{ $item->id }}" style="color: #5D4037">{{ $item->name }}</option>
-                                        @endforeach
+                                    <select name="role_id" id="role_id"  style="margin-top: 2px; color: #000;">
+                                        <option value="" style="color: #999">-- Registered As --</option>
+                                        <option value="6" style="color: #999">-- User --</option>
+                                        <option value="5" style="color: #999">-- Disabled User --</option>
                                     </select>
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
@@ -163,7 +180,24 @@
 
                             <div class="form__main__fields">
                                 <div class="group">
-                                    <input type="password" name="password" id="password" value="" autofocus autocomplete="new-password" required>
+                                    <input type="file" name="file" id="file" value="" autofocus autocomplete="file" >
+                                    <span class="highlight"></span>
+                                    <span class="bar"></span>
+                                    <label for="file">{{ __('File, (Please Give Your Disability Or Organization Proof!)') }}</label>
+                                </div>
+                                @error('file')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+
+                            <div class="form__main__fields">
+                                <div class="group">
+                                    {!! Form::password('password', null, ['id' => 'password', 'autofocus', "autocomplete" => "new-password"]) !!}
+
+                                    {{--  <input type="password" name="password" id="password" value="" autofocus autocomplete="new-password" >  --}}
+
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
                                     <label for="password">{{ __('Password') }}</label>
@@ -177,8 +211,9 @@
 
                             <div class="form__main__fields">
                                 <div class="group">
-                                    <input id="password-confirm" type="password" name="password_confirmation" required
-                                        autocomplete="new-password">
+                                    {!! Form::password('password_confirmation', null, ['id' => 'password-confirm', 'autofocus', "autocomplete" => "new-password"]) !!}
+                                    {{--  <input id="password-confirm" type="password" name="password_confirmation"
+                                        autocomplete="new-password">  --}}
                                     <span class="highlight"></span>
                                     <span class="bar"></span>
                                     <label for="password-confirm">{{ __('Confirm Password') }}</label>
