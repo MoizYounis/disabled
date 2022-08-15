@@ -63,6 +63,7 @@ class HomeController extends Controller
         ]);
         return back()->with('success', 'Thanks For Contact Us, We Will Contact You Soon!');
     }
+
     public function stores()
     {
         $stores = Store::pluck('user_id')->toArray();
@@ -75,7 +76,7 @@ class HomeController extends Controller
         return view('store', compact('stores_arr'));
     }
     public function allProducts($id) {
-        $products = Store::where('user_id', $id)->with('user')->paginate(6);
+        $products = Store::where('user_id', $id)->with('store')->paginate(6);
         if($products == null){
         Flash::error('Store not found');
         return redirect(route('stores'));

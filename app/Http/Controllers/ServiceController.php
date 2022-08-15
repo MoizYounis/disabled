@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Service;
+use App\Utils\Constant;
 use Laracasts\Flash\Flash;
 use Illuminate\Http\Request;
+use App\Models\ServiceRequest;
 use Illuminate\Support\Facades\Session;
-use App\Utils\Constant;
 
 class ServiceController extends Controller
 {
@@ -165,5 +166,33 @@ class ServiceController extends Controller
         Flash::success('Service deleted successfully.');
 
         return redirect(route('service.index'));
+    }
+
+    public function serviceRequest($id) {
+        if(Session::has('user_auth')) {
+            $service = Service::find($id);
+            return view('service.service_request', compact('service'));
+        } else {
+            return redirect(route('userLoginView'));
+        }
+    }
+
+    public function addServiceRequest(Request $request) {
+        $request->validate([
+            'name' => 'required',
+            'phone' => 'required',
+            'email' => 'required',
+            'message' => 'required'
+        ]);
+
+        ServiceRequest::create([
+            "service_id" => $request->service_id,
+            "user_id" => session('user_auth')['id'],
+            'name' => $request->name,
+            'phone' => $request->phone,
+            'email' => $request->email,
+            'message' => $request->message
+        ]);
+        return back()->with('success', 'Your Request For Service Has Been Saved, We Will Contact You Soon!');
     }
 }

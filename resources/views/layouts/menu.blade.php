@@ -110,7 +110,7 @@
                                         <a class="dropdown-item hello" href="{{ route('register') }}">Register</a>
                                     @endif
                                     @if (Session::has('user_auth'))
-                                        <a class="dropdown-item hello" href="{{ route('profile') }}">Profile</a>
+                                        {{--  <a class="dropdown-item hello" href="{{ route('profile') }}">Profile</a>  --}}
                                         <a class="dropdown-item" href="{{ route('userLogout') }}">
                                             {{ __('Logout') }}
                                         </a>

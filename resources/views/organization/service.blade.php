@@ -50,9 +50,9 @@ Services
                     <th scope="row">{{ $service->name ?? 'N/A' }}</th>
                     <th scope="row">{{ $service->description ?? 'N/A' }}</th>
                     <td>
-                        <a href="{{ route('service.show', $service->id) }}" class="action-btn">
+                        <a href="{{ route('service-request', $service->id) }}" class="action-btn">
                             {{-- <i class="fas fa-eye"></i>  --}}
-                            Services
+                            Request For Service
                         </a>
                     </td>
                 </tr>

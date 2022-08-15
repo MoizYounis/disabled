@@ -25,8 +25,10 @@ Request for Product
                 <div class="col-md-9 col-lg-7">
                     <h3>Submit Your Request</h3>
                     <!-- RD Mailform-->
-                    <form class="rd-form rd-mailform" data-form-output="form-output-global" data-form-type="contact"
-                        method="post" action="bat/rd-mailform.php">
+                    @include('flash-message')
+                    <form {{-- class="rd-form rd-mailform" --}} {{-- data-form-output="form-output-global" --}} {{-- data-form-type="contact" --}} method="POST"
+                        action="{{ route('add-product-request') }}?product_id={{ $product->id }}">
+                        @csrf
                         <div class="form-wrap">
                             <input class="form-input" id="contact-name" type="text" name="name"
                                 data-constraints="@Required">
@@ -44,8 +46,7 @@ Request for Product
                         </div>
                         <div class="form-wrap">
                             <label class="form-label" for="contact-message"> Message</label>
-                            <textarea class="form-input" id="contact-message" name="message"
-                                data-constraints="@Required"></textarea>
+                            <textarea class="form-input" id="contact-message" name="message" data-constraints="@Required"></textarea>
                         </div>
                         <div class="row justify-content-center">
                             <div class="col-12 col-sm-7 col-lg-5">
