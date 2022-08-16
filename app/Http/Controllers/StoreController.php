@@ -3,10 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Store;
+use App\Utils\Constant;
 use Laracasts\Flash\Flash;
 use Illuminate\Http\Request;
+use App\Models\ProductRequest;
 use Illuminate\Support\Facades\Session;
-use App\Utils\Constant;
 
 class StoreController extends Controller
 {
@@ -178,9 +179,30 @@ class StoreController extends Controller
     }
     public function productRequest($id) {
         if(Session::has('user_auth')) {
-            return view('store.product_request');
+            $product = Store::find($id);
+            return view('store.product_request', compact('product'));
         } else {
             return redirect(route('userLoginView'));
         }
+    }
+
+    public function addProductRequest(Request $request) {
+        $request->validate([
+            'name' => 'required',
+            'phone' => 'required',
+            'email' => 'required',
+            'message' => 'required'
+        ]);
+
+        ProductRequest::create([
+            "product_id" => $request->product_id,
+            "user_id" => session('user_auth')['id'],
+            'name' => $request->name,
+            'phone' => $request->phone,
+            'email' => $request->email,
+            'message' => $request->message,
+            'owner_id' => $request->owner_id
+        ]);
+        return back()->with('success', 'Your Request For Product Has Been Saved, We Will Contact You Soon!');
     }
 }

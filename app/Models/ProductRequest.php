@@ -7,25 +7,34 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Store extends Model
+class ProductRequest extends Model
 {
-    public $table = 'stores';
-
+    public $table = 'product_requests';
     public $fillable = [
+        'product_id',
+        'user_id',
         'name',
-        'image',
-        'description',
-        'user_id'
+        'email',
+        'phone',
+        'message',
+        'owner_id',
+        'is_approved'
     ];
 
     /**
-     * Get the user that owns the Store
+     * Get the user that owns the ProductRequest
      *
      * @return \Illuminate\Database\Eloquent\Relations\BelongsTo
      */
-    public function store(): BelongsTo
+    public function user(): BelongsTo
     {
         return $this->belongsTo(User::class, 'user_id');
     }
+
+    public function product(): BelongsTo
+    {
+        return $this->belongsTo(Store::class, 'product_id');
+    }
+
     use HasFactory;
 }

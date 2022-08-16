@@ -86,6 +86,9 @@ Route::post('contact-us', [HomeController::class, 'contactUs'])->name('contact-u
 Route::get('profile', [ProfileController::class, 'index'])->name('profile');
 Route::get('/user_logout',[UserLoginController::class,'userLogout'])->name('userLogout');
 Route::get('user/product-request/{id}', [StoreController::class, 'productRequest'])->name('product-request');
+Route::post('user/add/product-request', [StoreController::class, 'addProductRequest'])->name('add-product-request');
+Route::get('user/service-request/{id}', [ServiceController::class, 'serviceRequest'])->name('service-request');
+Route::post('user/add/service-request', [ServiceController::class, 'addServiceRequest'])->name('add-service-request');
 Route::group(['middleware' => ['user_auth']], function () {
 
 });
