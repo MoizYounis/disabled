@@ -51,6 +51,8 @@ Route::group(['middleware' => ['auth']], function () {
 
     //Store
     Route::resource('store', StoreController::class);
+    Route::get('store/all/products/request', [StoreController::class, 'allProductsRequest'])->name('all_products_request');
+    Route::get('organization/all/services/request', [ServiceController::class, 'allServicesRequest'])->name('all_services_request');
 
     //Service
     Route::resource('service', ServiceController::class);

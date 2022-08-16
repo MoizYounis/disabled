@@ -31,6 +31,11 @@ class ProductRequest extends Model
         return $this->belongsTo(User::class, 'user_id');
     }
 
+    public function owner(): BelongsTo
+    {
+        return $this->belongsTo(User::class, 'owner_id');
+    }
+
     public function product(): BelongsTo
     {
         return $this->belongsTo(Store::class, 'product_id');
