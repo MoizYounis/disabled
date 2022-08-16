@@ -205,4 +205,9 @@ class StoreController extends Controller
         ]);
         return back()->with('success', 'Your Request For Product Has Been Saved, We Will Contact You Soon!');
     }
+
+    public function allProductsRequest() {
+        $products = ProductRequest::with('owner', 'product')->where('owner_id', auth()->user()->id)->orderBy('id', 'DESC')->get();
+        return view('products_request.index', compact('products'));
+    }
 }

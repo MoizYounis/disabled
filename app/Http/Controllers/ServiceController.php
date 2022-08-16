@@ -196,4 +196,9 @@ class ServiceController extends Controller
         ]);
         return back()->with('success', 'Your Request For Service Has Been Saved, We Will Contact You Soon!');
     }
+
+    public function allServicesRequest() {
+        $services = ServiceRequest::with('owner', 'service')->where('owner_id', auth()->user()->id)->orderBy('id', 'DESC')->get();
+        return view('services_request.index', compact('services'));
+    }
 }
