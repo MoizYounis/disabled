@@ -18,7 +18,7 @@ Contact
             </div>
         </div>
     </section>
-    <section class="section section-lg text-center bg-default">
+    <section class="section section-small text-center bg-default">
         <div class="container">
             <div class="row row-50">
                 <div class="col-md-6 col-lg-4">

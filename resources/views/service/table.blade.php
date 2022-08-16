@@ -12,8 +12,8 @@
         @foreach ($services as $key => $service)
             <tr>
                 <th scope="row">{{ $key + 1 }}</th>
-                <th scope="row">{{ $service->user->name }}</th>
-                <th scope="row">{{ $service->name }}</th>
+                <th scope="row">{{ $service->user->name ?? " " }}</th>
+                <th scope="row">{{ $service->name ?? " " }}</th>
                 <th scope="row">{{ $service->description }}</th>
                 <td>
                     {{--  <a href="{{ route('service.show', $service->id) }}" class="action-btn">
