@@ -64,8 +64,8 @@
 
     @if (auth()->user()->role == \App\Utils\Constant::STORE)
         <li class=" nav-item">
-            <a class="d-flex align-items-center {{ Route::is('all_products_request.index*') ? 'active' : '' }}"
-                href="{{ route('all_products_request.index') }}">
+            <a class="d-flex align-items-center {{ Route::is('all_products_request*') ? 'active' : '' }}"
+                href="{{ route('all_products_request') }}">
                 <i data-feather="bell"></i>
                 <span class="menu-title text-truncate" data-i18n="Product Requets">Product Requets</span>
             </a>
@@ -74,8 +74,8 @@
 
     @if (auth()->user()->role == \App\Utils\Constant::SCHOOL || auth()->user()->role == \App\Utils\Constant::NGO || auth()->user()->role == \App\Utils\Constant::HOSPITAL)
         <li class=" nav-item">
-            <a class="d-flex align-items-center {{ Route::is('all_services_request.index*') ? 'active' : '' }}"
-                href="{{ route('all_services_request.index') }}">
+            <a class="d-flex align-items-center {{ Route::is('all_services_request*') ? 'active' : '' }}"
+                href="{{ route('all_services_request') }}">
                 <i data-feather="bell"></i>
                 <span class="menu-title text-truncate" data-i18n="Service Requets">Service Requets</span>
             </a>
