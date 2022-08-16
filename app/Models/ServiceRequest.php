@@ -15,7 +15,9 @@ class ServiceRequest extends Model
         'name',
         'email',
         'phone',
-        'message'
+        'message',
+        'owner_id',
+        'is_approved'
     ];
 
     /**

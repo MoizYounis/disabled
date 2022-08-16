@@ -16,7 +16,9 @@ class ProductRequest extends Model
         'name',
         'email',
         'phone',
-        'message'
+        'message',
+        'owner_id',
+        'is_approved'
     ];
 
     /**

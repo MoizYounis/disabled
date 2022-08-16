@@ -191,7 +191,8 @@ class ServiceController extends Controller
             'name' => $request->name,
             'phone' => $request->phone,
             'email' => $request->email,
-            'message' => $request->message
+            'message' => $request->message,
+            'owner_id' => $request->owner_id
         ]);
         return back()->with('success', 'Your Request For Service Has Been Saved, We Will Contact You Soon!');
     }

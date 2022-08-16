@@ -32,6 +32,7 @@ Request for Service
                         <div class="form-wrap">
                             <input class="form-input" id="contact-name" type="text" name="name"
                                 data-constraints="@Required">
+                                <input type="hidden" name="owner_id" value="{{ $service->user_id }}">
                             <label class="form-label" for="contact-name">Your Name</label>
                         </div>
                         <div class="form-wrap">
