@@ -4,8 +4,8 @@
     </div>
     <div class="preloader">
         <div class="preloader-logo"><a class="brand" href="index.html"><img class="brand-logo-dark"
-                    src="assets/images/pwb-hub.png" alt="" width="245" height="50" /><img
-                    class="brand-logo-light" src="assets/images/pwb-hub.png" alt="" width="245"
+                    src="{{ asset('assets/images/pwb-hub.png') }}"" alt="" width="245" height="50" /><img
+                    class="brand-logo-light" src="{{ asset('assets/images/pwb-hub.png') }}" alt="Moiz Di jan" width="245"
                     height="50" /></a>
         </div>
         <div class="preloader-body">
@@ -34,8 +34,8 @@
                                 <button class="rd-navbar-toggle"
                                     data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
                                 <!-- RD Navbar Brand-->
-                                <div class="rd-navbar-brand"><a href="index.html"><img class="brand-logo-light"
-                                            src="assets/images/pwb-hub.png" alt="" width="150"
+                                <div class="rd-navbar-brand"><a href="{{ route('home') }}"><img class="brand-logo-light"
+                                            src="{{ asset('assets/images/pwb-hub.png') }}" alt="" width="150"
                                             height="51" /></a></div>
                                 </div>
                             <div class="rd-navbar-main-element">
