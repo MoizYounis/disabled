@@ -104,6 +104,7 @@
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <label for="password">Password</label>
+                            <a href="{{ route('password.request') }}">Forgot Password</a>
                         </div>
 
                         {{--  @if (Route::has('password.request'))
@@ -113,7 +114,7 @@
                         @endif  --}}
 
                         <div class="text-center">
-                            <button type="submit" class="app-button">Login &nbsp;<i
+                            <button type="submit" class="app-button mt-1">Login &nbsp;<i
                                     class="fa fa-angle-right"></i></button>
                         </div>
 
