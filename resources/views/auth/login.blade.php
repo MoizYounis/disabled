@@ -103,7 +103,7 @@
                             <span class="highlight"></span>
                             <span class="bar"></span>
                             <label for="password">Password</label>
-                            <a href="{{ route('password.request') }}">Forgot Password</a>
+                            {{--  <a href="{{ route('password.request') }}">Forgot Password</a>  --}}
                         </div>
 
                         {{--  @if (Route::has('password.request'))
