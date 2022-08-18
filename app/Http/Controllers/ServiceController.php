@@ -198,7 +198,7 @@ class ServiceController extends Controller
     }
 
     public function allServicesRequest() {
-        $services = ServiceRequest::with('owner', 'service')->where('owner_id', auth()->user()->id)->orderBy('id', 'DESC')->get();
+        $services = ServiceRequest::with('user', 'service')->where('owner_id', auth()->user()->id)->orderBy('id', 'DESC')->get();
         return view('services_request.index', compact('services'));
     }
 }

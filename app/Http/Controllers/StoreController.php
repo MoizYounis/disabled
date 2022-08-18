@@ -207,7 +207,7 @@ class StoreController extends Controller
     }
 
     public function allProductsRequest() {
-        $products = ProductRequest::with('owner', 'product')->where('owner_id', auth()->user()->id)->orderBy('id', 'DESC')->get();
+        $products = ProductRequest::with('user', 'product')->where('owner_id', auth()->user()->id)->orderBy('id', 'DESC')->get();
         return view('products_request.index', compact('products'));
     }
 }
