@@ -13,10 +13,10 @@
         @foreach ($services as $key => $service)
             <tr>
                 <th scope="row">{{ $key + 1 }}</th>
-                <th scope="row">{{ $service->owner->name }}</th>
+                <th scope="row">{{ $service->user->name }}</th>
                 <th scope="row">{{ $service->service->name }}</th>
-                <th scope="row">{{ $service->owner->email }}</th>
-                <th scope="row">{{ $service->owner->phone }}</th>
+                <th scope="row">{{ $service->user->email }}</th>
+                <th scope="row">{{ $service->user->phone }}</th>
                 <th scope="row">{{ $service->message }}</th>
             </tr>
         @endforeach
