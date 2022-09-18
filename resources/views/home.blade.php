@@ -76,7 +76,7 @@
             </div>
         </div>
     </section>
-    <section class="section section-small bg-gray-1">
+    <section class="section section-lg bg-gray-1">
         <div class="container">
             <div class="row justify-content-center text-center">
                 <div class="col-md-9 col-lg-7 wow-outer">

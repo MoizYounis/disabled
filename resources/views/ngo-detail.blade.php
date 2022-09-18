@@ -58,7 +58,7 @@
                 sector, volunteer sector, and civil society during discussions about NGOs.
             </p>
             <h3>NGOs in PAKISTAN</h3>
-            <p>Throughout the times’ humanity has grown, evolved, and survived with the help of each other. A perfect
+            <p>Throughout the times humanity has grown, evolved, and survived with the help of each other. A perfect
                 society is one where everyone helps each other to the best of their abilities to improve the living
                 conditions of all members of society.</p>
             <p>In recent times with ever-growing problems such as economic recession, poverty, scarcity of resources,
@@ -67,7 +67,7 @@
             <p>Due to such need arising, the world was introduced to the concept of NGOs. NGOs or NPOs are independent
                 organizations formed with the goal of challenging a social, political, or economic issue.
             </p>
-            <p>NGOs or NPOs’ goal is to tackle the issue they feel is important to the society they live in. These
+            <p>NGOs or NPOs goal is to tackle the issue they feel is important to the society they live in. These
                 organizations have missions and objectives which are carried out by their members and volunteers. They can
                 be organized and operated on variable levels, including local, national, or even international.</p>
             <p>
@@ -92,7 +92,7 @@
             </ol>
             </p>
             <h3>1. JDC Foundation Pakistan</h3>
-            <p>JDC organization was founded by Zafar Abbas. For the past 12 years, the JDC welfare organization is serving
+            <p>JDC organization was founded by Zafar Abbas. For the past 12 years, the JDC welfare organization is serving
                 all over Pakistan and almost in all areas of human development. The organization currently provides
                 charitable and welfare services like:
             <ul>
@@ -199,7 +199,7 @@
             <br>
           
             <h4 class="text-center my-5"><b><a href="{{ route('contact') }}">Contact Us</a></b></h3>
-            <h3 class="text-center my-5"><b><a href="{{ route('organization') }}?name=NGO">See All NGO's</a></b></h3>
+            <h3 class="text-center my-5"><b><a href="{{ route('organization') }}?name=NGO">See All NGOs</a></b></h3>
         </div>
     </section>
 @endsection

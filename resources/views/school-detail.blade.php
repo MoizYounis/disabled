@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('title')
-   Read About Schools
+  Read About Schools
 @endsection
 @section('section')
     <!-- Swiper-->
@@ -34,7 +34,7 @@
                 <div class="row row-50 justify-content-lg-center align-items-lg-center">
                     <div class="col-lg-12">
                         <div class="bunner-content-modern text-center">
-                            <h1 class="main-bunner-title">Read About Schools</h1>
+                            <h1 class="main-bunner-title">Schools</h1>
                             {{-- <p>A hero is an ordinary individual who finds the strength to persevere and endure in spite of overwhelming obstacles.</p> --}}
                         </div>
                     </div>
@@ -104,7 +104,7 @@
             <p>In-Service Training College is providing professional training and latest teaching techniques through teaching aid to the teachers.
             </p>
             <h4 class="text-center my-5"><b><a href="{{ route('contact') }}">Contact Us</a></b></h3>
-            <h3 class="text-center my-5"><b><a href="{{ route('organization') }}?name=School">See All Schools's</a></b></h3>
+            <h3 class="text-center my-5"><b><a href="{{ route('organization') }}?name=School">See All Schools</a></b></h3>
         </div>
     </section>
    

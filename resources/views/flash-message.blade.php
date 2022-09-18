@@ -71,7 +71,7 @@
         $(document).ready(function() {
             toastr.options = {
                 "debug": false,
-                "positionClass": "toast-bottom-full-width",
+               // "positionClass": "toast-bottom-full-width",
                 "onclick": null,
                 "fadeIn": 300,
                 "fadeOut": 1000,

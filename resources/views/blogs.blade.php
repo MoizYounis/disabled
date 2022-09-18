@@ -21,7 +21,7 @@
     </section>
     <!-- Base typography -->
     <section class="section section-lg bg-default">
-        <h4 class="text-center">Read Blogs</h4>
+        <h2 class="text-center">Read Blogs</h2>
         <div class="container">
             <div class="row row-50 flex-lg-row-reverse justify-content-xl-between">
                 <div class="col-xl-2">
