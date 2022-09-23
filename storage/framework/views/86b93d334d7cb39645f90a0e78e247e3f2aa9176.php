@@ -1,0 +1,13 @@
+<ul class="nav navbar-nav flex-row">
+    <li class="nav-item me-auto"><a class="navbar-brand"
+            href="../../../html/ltr/vertical-menu-template/index.html">
+            
+            <h2 class="brand-text">PWD - Hub</h2>
+        </a></li>
+    <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pe-0"
+            data-bs-toggle="collapse"><i class="d-block d-xl-none text-primary toggle-icon font-medium-4"
+                data-feather="x"></i><i
+                class="d-none d-xl-block collapse-toggle-icon font-medium-4  text-primary"
+                data-feather="disc" data-ticon="disc"></i></a></li>
+</ul>
+<?php /**PATH C:\Users\muham\Music\disabled_person\resources\views/admin/layout/sidebar-logo.blade.php ENDPATH**/ ?>

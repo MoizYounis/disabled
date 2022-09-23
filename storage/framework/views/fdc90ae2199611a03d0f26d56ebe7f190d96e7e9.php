@@ -1,0 +1,1 @@
+<?php /**PATH C:\Users\muham\Music\disabled_person\resources\views/layouts/datatables_css.blade.php ENDPATH**/ ?>
